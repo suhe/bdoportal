@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="b6a786d7-5c04-4d86-8c99-7c591e57b925" kpf_version="5" name="bdoportal.komodoproject">
+<preference-set idref="b6a786d7-5c04-4d86-8c99-7c591e57b925" id="project" preftype="project">
+  <boolean id="dedentOnColon">0</boolean>
+  <string id="editAutoIndentStyle">smart</string>
+  <boolean id="editBackspaceDedents">1</boolean>
+  <boolean id="editElectricBrace">1</boolean>
+  <boolean id="enableElasticTabstops">0</boolean>
+  <boolean id="indentStringsAfterParens">0</boolean>
+  <long id="indentWidth">4</long>
+  <long id="prefs_version">1</long>
+  <boolean id="showIndentationGuides">1</boolean>
+  <long id="tabWidth">4</long>
+  <boolean id="useSmartTabs">1</boolean>
+  <boolean id="useTabs">1</boolean>
+</preference-set>
+</project>

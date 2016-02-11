@@ -1,0 +1,5170 @@
+/* Perkspot.css */
+
+
+body
+{
+	font-family: Arial;
+	font-size:13px;
+	background-color: #e6e6e6;
+}
+
+a
+{
+	text-decoration: none;
+	color: #002B5C;
+}
+
+div.Data
+{
+	display: none;
+}
+
+.Hidden
+{
+	display: none;
+}
+
+/* Global layout */
+/* ------------------------------------------------- */
+
+div.GlobalMessagePane
+{
+	width: 100%;
+	border-bottom: solid 1px #CFC79B;
+	background-color: #fff9d7;
+	height: 48px;
+}
+
+	div.GlobalMessagePane div.Helper
+	{
+		width: 883px;
+		margin: 0 auto;
+		padding: 10px 0 10px 0;
+	}
+
+		div.GlobalMessagePane div.Helper span
+		{
+			color: #555;
+			font-weight: bold;
+			float: left;
+			display: block;
+			padding: 6px 30px 5px 0;
+		}
+	
+		div.GlobalMessagePane div.Helper a.GlobalButton
+		{
+			
+		}
+	
+		div.GlobalMessagePane div.Helper a.ChangeEmail
+		{
+			float: right;
+			display: block;
+			padding: 6px 0 5px 0;
+		}
+
+div.GlobalHeaderContainer
+{
+	background-color: #E5E5E5;
+	width: 100%;
+	height:81px; 
+	border-bottom:1px solid #D7D7D7;
+	background-color:#FFFFFF;
+}
+
+div.GlobalHeader
+{
+	width:883px; 
+	margin:0 auto;
+}
+
+div.GlobalHeader div.LogoContainer
+{
+	width:250px; 
+	height:81px; 
+	
+	float:left;
+	display:inline;
+	
+	padding:0 5px;
+}
+
+div.GlobalHeader div.LogoContainer a
+{
+	display:block; 
+	
+	width:250px; 
+	height:50px; 
+	
+	padding:15px 0 13px 0; 
+	
+	text-align:center;
+}
+
+div.GlobalHeader div.LogoContainer a img
+{
+	height:50px;
+}
+
+div.GlobalHeader div.SectionNavigation
+{
+	float:left;
+	display:inline;
+	
+	width:492px;
+	
+	margin:0 0 0 7px;
+}
+
+div.GlobalHeader div.SectionNavigation a
+{
+	width:71px;
+	height:34px; 
+	
+	float:left; 
+	display:inline;
+	
+	position:relative;
+	
+	padding:47px 5px 0 5px; 
+	margin:0 0 0 1px; 
+	
+	text-align:center; 
+	background-image:url("../images/nav-icon-sprite.gif"); 
+	
+	color:#787878; 
+	font-size:9px; 
+}
+
+
+div.GlobalHeader div.SectionNavigation a.Discounts
+{
+	background-position:0 0;
+}
+
+div.GlobalHeader div.SectionNavigation a.Benefits
+{
+	background-position:-81px 0;
+}
+
+div.GlobalHeader div.SectionNavigation a.AutoAndHome
+{
+	background-position:-162px 0;
+}
+
+div.GlobalHeader div.SectionNavigation a.LegalPlans
+{
+	background-position:-243px 0;
+}
+
+div.GlobalHeader div.SectionNavigation a.PetInsurance
+{
+	background-position:-324px 0;
+}
+
+div.GlobalHeader div.SectionNavigation a.Discounts:hover span,
+div.GlobalHeader div.SectionNavigation a.Discounts_Selected span,
+div.GlobalHeader div.SectionNavigation a.Benefits:hover span,
+div.GlobalHeader div.SectionNavigation a.Benefits_Selected span,
+div.GlobalHeader div.SectionNavigation a.AutoAndHome:hover span,
+div.GlobalHeader div.SectionNavigation a.AutoAndHome_Selected span,
+div.GlobalHeader div.SectionNavigation a.LegalPlans:hover span,
+div.GlobalHeader div.SectionNavigation a.LegalPlans_Selected span,
+div.GlobalHeader div.SectionNavigation a.PetInsurance:hover span,
+div.GlobalHeader div.SectionNavigation a.PetInsurance_Selected span
+{
+	display:block;
+	
+	position:absolute;
+	
+	font-size:1px;
+	
+	left:5px;
+	bottom:0;
+	_bottom:-1px;
+	
+	width:70px;
+	height:7px;
+	
+	background-image:url("../images/nav-selected-bar.png");
+}
+
+div.GlobalHeader div.SectionNavigation a.Discounts:hover,
+div.GlobalHeader div.SectionNavigation a.Discounts_Selected
+{
+	background-position:0 -81px;
+	color:#4A4A4A; 
+	text-shadow:0 -1px 0 #FFFFFF;
+}
+
+div.GlobalHeader div.SectionNavigation a.Benefits:hover,
+div.GlobalHeader div.SectionNavigation a.Benefits_Selected
+{
+	background-position:-81px -81px;
+	color:#4A4A4A; 
+	text-shadow:0 -1px 0 #FFFFFF;
+}
+
+div.GlobalHeader div.SectionNavigation a.AutoAndHome:hover,
+div.GlobalHeader div.SectionNavigation a.AutoAndHome_Selected
+{
+	background-position:-162px -81px;
+	color:#4A4A4A; 
+	text-shadow:0 -1px 0 #FFFFFF;
+}
+
+div.GlobalHeader div.SectionNavigation a.LegalPlans:hover,
+div.GlobalHeader div.SectionNavigation a.LegalPlans_Selected
+{
+	background-position:-243px -81px;
+	color:#4A4A4A; 
+	text-shadow:0 -1px 0 #FFFFFF;
+}
+
+div.GlobalHeader div.SectionNavigation a.PetInsurance:hover,
+div.GlobalHeader div.SectionNavigation a.PetInsurance_Selected
+{
+	background-position:-324px -81px;
+	color:#4A4A4A; 
+	text-shadow:0 -1px 0 #FFFFFF;
+}
+
+
+div.GlobalHeader div.AccountContainer
+{
+	float:right;
+	display:inline;
+}
+
+div.GlobalHeader div.Seperator
+{
+	float:left;
+	display:inline;
+	
+	width:2px;
+	height:81px;
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer
+{
+	float:left;
+	display:inline;
+	
+	position:relative;
+	
+	z-index:19;
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer div.BackTo 
+{
+	height:16px;
+	
+	margin:0 0 0 16px;
+	
+	padding:12px 0 0 0;
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer div.BackTo a
+{
+	font-size:10px;
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer a.AccountDropDown
+{
+	display:block;
+	
+	background-image:url("../images/dropdown-button.gif");
+
+	margin:0 0 0 14px;
+
+	color:#4A4A4A;
+	font-size:12px;
+	
+	padding:5px 0 0 8px;
+
+	width:89px;
+	height:20px;
+	
+	text-shadow:0 1px 0 #EEEEEE;
+	
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer div.UtilityLinks
+{
+	position:absolute;
+	z-index:20;
+	
+	display:none;
+	
+	background-color:#ffffff;
+	border:1px solid #AAAAAA;
+	border-top:none;
+	
+	width:89px;
+	
+	left:18px;
+	top:53px;
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer div.UtilityLinks a
+{
+	display:block;
+	width:79px;
+	
+	font-size:11px;
+	
+	padding:4px 5px;
+	
+	color:#707070;
+}
+
+div.GlobalHeader div.AccountContainer div.UtilityLinksContainer div.UtilityLinks a:hover
+{
+	color:#FFFFFF;
+	background-color:#707070;
+}
+
+    div.GlobalHeader ul.UtilityLinks {
+        font-size: 12px;
+        float: right;
+        margin: 15px 0 0 0;
+    }
+
+    div.GlobalHeader ul.UtilityLinks li {
+        display: inline;
+        padding: 0 7px 0 9px;
+        border-right: solid 1px #ccc;
+    }
+
+        div.GlobalHeader ul.UtilityLinks li:last-child {
+            border: none;
+            padding-right: 0;
+        }
+
+        div.GlobalHeader ul.UtilityLinks li a {
+
+        }
+
+            div.GlobalHeader ul.UtilityLinks li a:hover {
+                text-decoration: underline;
+            }
+
+div.GlobalMezzanineLevel
+{
+	width:881px;
+	height:40px;
+	margin:0 auto;
+}
+
+div.GlobalBreadCrumbContainer
+{
+	font-size: 12px;
+	float: left;
+	font-size: 11px;
+	padding:16px 0 0 0;
+}
+
+div.GlobalBreadCrumbContainer a:hover
+{
+	text-decoration: underline;
+}
+
+div.GlobalBreadCrumbContainer span
+{
+	padding: 0 9px;
+	background-image: url("../images/breadcrumbseparator.gif");
+	background-position: -1px center;
+	background-repeat: no-repeat;
+	
+	#display: inline-block;
+}
+
+div.GlobalBreadCrumbContainer span.Selected
+{
+	color: #6E6E6E;
+	background-image: none;
+	padding: 0;
+}
+
+div.GlobalSearchControlsContainer
+{
+	float: right;
+	padding:11px 0 0 0;
+}
+
+div.GlobalSearchControlsContainer input
+{
+	font-size: 12px;
+	padding: 3px 5px;
+	width: 190px;
+	margin: 0 10px 0 0;
+	border: solid 1px #d5d5d5;
+	float: left;
+}
+
+div.GlobalSearchControlsContainer a
+{
+	background-image: url(https://static.perkspot.com/images//community/friends/globalsearchbuttonright.png);
+	background-position: right top;
+	background-repeat: no-repeat;
+	height: 23px;
+	float: left;
+}
+
+div.GlobalSearchControlsContainer a span
+{
+	background-image: url(https://static.perkspot.com/images//community/friends/globalsearchbuttonleft.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	font-size: 13px;
+	color: #fff;
+	padding: 2px 15px 4px 30px;
+	font-weight: bold;
+	display: block;
+}
+
+div.GlobalBodyContainer
+{
+	width: 890px;
+	margin: 0 auto 0 auto;
+}
+
+div.GlobalBodyTop
+{
+	width: 890px;
+	height: 7px;
+	margin: 0 0 -2px 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalbodytopbackground.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	float: left;
+	font-size: 1px;
+}
+
+div.GlobalBodyBottom
+{
+	width: 890px;
+	height: 7px;
+	margin: -2px 0 0 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalbodybottombackground.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	float: left;
+	font-size: 1px;
+}
+
+div.GlobalBodyLeft
+{
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalbodyleftbackground.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+	width: 885px;
+	padding: 0 0 0 5px;
+}
+
+div.GlobalBodyRight
+{
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalbodyrightbackground.gif);
+	background-position: right top;
+	background-repeat: repeat-y;
+	background-color:#FFF;
+	width: 880px;
+	padding: 0 5px 0 0;
+}
+
+div.GlobalOneColumn
+{
+	width: 840px;
+	padding: 20px;
+	float: left;
+	background-color: #fff;
+}
+
+div.GlobalTwoColumnLeftColumn
+{
+	width: 880px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globaltwocolumnleftcolumnbackground.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+	background-color: #fff;
+}
+
+div.GlobalTwoColumnRightColumn
+{
+	background-color: #fff;
+	width: 680px;
+	float: right;
+}
+
+div.GlobalSidebarLeftColumn
+{
+	background-color: #fff;
+	width: 680px;
+	float: left;
+	padding: 0 0 20px 0;
+}
+
+div.GlobalSidebarRightColumn
+{
+	width: 880px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalsidebarrightcolumnbackground.gif);
+	background-position: right top;
+	background-repeat: repeat-y;
+	background-color: #fff;
+}
+
+div.GlobalFooterContainer
+{
+	padding-top: 4px;
+	width: 100%;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalfooterbackgound.gif);
+	background-position: top left;
+	background-repeat: repeat-x;
+	margin: 30px 0 0 0;
+	float: left;
+}
+
+div.GlobalFooterHelper
+{
+	background-color: #fff;
+	width: 100%;
+	border-top: solid 3px #002B5C;
+	float: left;
+	padding: 20px 0 20px 0;
+}
+
+div.GlobalFooter
+{
+	width: 880px;
+	margin: 0 auto;
+}
+
+div.GlobalFooter div.Column
+{
+	float: left;
+	width: 270px;
+	margin: 0 35px 0 0;
+}
+
+div.GlobalFooter div.Last
+{
+	margin: 0;
+}
+
+div.GlobalFooter a
+{
+	
+}
+
+div.GlobalFooter div.Column h5
+{
+	font-size: 13px;
+	font-weight: bold;
+	padding: 0 0 7px 0;
+	margin: 0 0 7px 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/dottedline.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #868686;
+}
+
+div.GlobalFooter div.Column ul
+{
+	width: 130px;
+	margin: 0 5px 0 0;
+	float: left;
+}
+
+div.GlobalFooter div.Column ul li a
+{
+	display: block;
+	width: 130px;
+	padding: 1px 0;
+	font-size: 12px;
+}
+
+div.GlobalFooter div.Column p
+{
+	font-size: 12px;
+	color: #757575;
+}
+
+div.PerkSpotWatermark
+{
+	width: 125px;
+	height: 15px;
+	margin: 20px 381px 0 381px;
+	float: left;
+	font-weight: bold;
+	text-decoration: underline;
+	display: inline;
+}
+
+
+
+/* Secondary Navigation */
+/* ------------------------------------------------- */
+
+div.SecondaryNavigationContainer
+{
+	width: 200px;
+	margin: 20px 0;
+	float: left;
+	display: inline;
+}
+
+div.SecondaryNavigationSection
+{
+	margin: 0 0 25px 0;
+}
+
+div.SecondaryNavigationSection div
+{
+	color: #868686;
+	font-weight: bold;
+	padding: 0 20px 2px 20px;
+	border-bottom: solid 1px #e1e1e1;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+div.SecondaryNavigationSection ul
+{
+}
+
+div.SecondaryNavigationSection ul li
+{
+}
+
+div.SecondaryNavigationSection ul li a
+{
+	display: block;
+	padding: 4px 20px 4px 20px;
+	width: 160px;
+	font-size: 12px;
+	border-bottom: solid 1px #E1E1E1;
+	color: #002B5C !important;
+}
+
+div.SecondaryNavigationSection ul li a:hover
+{
+	background-color: #fff;
+	background-image: url(https://static.perkspot.com/images//community/friends/secondarynavigationhoverarrow.png);
+	background-position: 180px center;
+	background-repeat: no-repeat;
+}
+
+div.SecondaryNavigationSection ul li a.Selected
+{
+	background-color: #fff;
+	background-image: url(https://static.perkspot.com/images//community/friends/secondarynavigationhoverarrow.png);
+	background-position: 180px center;
+	background-repeat: no-repeat;
+}
+
+div.SecondaryNavigationBanner
+{
+	width: 160px;
+	padding: 4px 20px 4px 20px;
+	float: left;
+	display: inline;
+}
+
+	div.SecondaryNavigationBanner a
+	{
+	}
+	
+		div.SecondaryNavigationBanner a img
+		{
+			
+		}
+
+/* Global Local Navigation */
+/* ------------------------------------------------- */
+
+/* Global Local, Ha! */
+
+div.GlobalLocalNavigationContainer
+{
+	float: left;
+	border-bottom: solid 2px #002B5C;
+}
+
+div.GlobalLocalNavigationContainer table
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globallocalnavigationbackground.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 25px;
+}
+
+div.GlobalLocalNavigationContainer table tr td
+{
+	text-align: center;
+}
+
+div.GlobalLocalNavigationContainer table tr a
+{
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	color: #434343;
+	font-size: 12px;
+	padding: 5px 18px 4px 18px;
+	border-top: solid 1px #CFCFCF;
+	border-right: solid 1px #CFCFCF;
+}
+
+div.GlobalLocalNavigationContainer table tr a.First
+{
+	border-left: solid 1px #CFCFCF;
+}
+
+div.GlobalLocalNavigationContainer table tr a.Last
+{
+}
+
+div.GlobalLocalNavigationContainer table tr a.Selected
+{
+	background-image: url(https://static.perkspot.com/images//community/friends/globalbuttoncenter.png);
+	background-repeat: repeat-x;
+	background-position: left center;
+	border: 0;
+	border-top: solid 1px #002B5C;
+	color: #fff;
+}
+
+div.GlobalLocalNavigationContainer
+{
+	float: left;
+	border-bottom: solid 1px #dbdbdb;
+}
+
+div.GlobalLocalNavigationContainer ul
+{
+	height: 29px;
+}
+
+div.GlobalLocalNavigationContainer ul li
+{
+	display: inline;
+}
+
+div.GlobalLocalNavigationContainer ul li a
+{
+}
+
+div.GlobalLocalNavigationContainer ul li a.First
+{
+}
+
+div.GlobalLocalNavigationContainer ul li a.Last
+{
+}
+
+div.GlobalLocalNavigationContainer ul li a.Selected
+{
+}
+
+/* Global Basic Header */
+/* ------------------------------------------------- */
+
+div.GlobalBasicHeaderContainer
+{
+	width: 680px;
+	margin: 20px 0;
+	position: relative;
+}
+
+div.GlobalBasicHeader
+{
+	margin: 0 20px;
+	width: 365px;
+	padding: 20px 30px 20px 245px;
+	background-image:url(https://static.perkspot.com/images//community/friends/bg-sprite.png);
+	background-position: left top;
+	background-repeat: repeat-y;
+	border-bottom: solid 2px #002B5C;
+}
+
+div.GlobalBasicHeader h1
+{
+	font-size: 17px;
+	color: #FFF;
+	line-height: 100%;
+	font-family: helvetica,arial,sans-serif;
+	font-weight: bold;
+}
+
+div.GlobalBasicHeader p
+{
+	margin: 10px 0 0 0;
+	font-size: 12px;
+	color: #FFF;
+	line-height: 125%;
+}
+
+div.GlobalBasicHeaderImage
+{
+	position: absolute;
+	left: 25px;
+	top: 5px;
+	width: 225px;
+	height: 169px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globalbasicheaderimagebackground.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/dingotheme/globalbasicheaderimagebackground.png');
+}
+
+div.GlobalBasicHeaderImage img
+{
+	margin: 23px 0 0 23px;
+}
+
+/* Benefit Category Condensed */
+/* ------------------------------------------------- */
+
+div.BenefitCategoryItemContainer
+{
+	float: left;
+	width: 640px;
+	margin: 10px 0 15px 0;
+}
+
+div.BenefitCategoryItemColumnLeft
+{
+	width: 70px;
+	height: 52px;
+	margin: 0 15px 0 0;
+	float: left;
+}
+
+div.BenefitCategoryItemColumnLeft a
+{
+}
+
+div.BenefitCategoryItemColumnLeft a img
+{
+	width: 70px;
+	height: 52px;
+}
+
+div.BenefitCategoryItemColumnCenter
+{
+	float: left;
+	width: 410px;
+}
+
+div.BenefitCategoryItemColumnCenter a
+{
+	font-weight: bold;
+	font-size: 15px;
+	float: left;
+}
+
+div.BenefitCategoryItemColumnCenter span
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/dottedline.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	margin: 5px 0 0 0;
+	padding: 5px 0 0 0;
+	font-size: 12px;
+	color: #3e3e3e;
+	width: 410px;
+	float: left;
+	line-height: 1.5;
+}
+
+div.BenefitCategoryItemColumnRight
+{
+	margin: 10px 0 0 15px;
+	float: left;
+	width: 130px;
+	text-align: center;
+}
+
+div.BenefitCategoryItemColumnRight a.GlobalRightArrowButton
+{
+	margin: 5px 0 0 0;
+}
+
+/* Global Linkbar */
+/* ------------------------------------------------- */
+
+div.GlobalLinkBarContainer
+{	
+	float: left;
+	position: absolute;
+	width: 656px;
+	left: 12px;
+	bottom: 10px;
+	z-index: 999;
+}
+
+div.GlobalLinkBarContainer div.Top
+{
+	width: 656px;
+	height: 4px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globallinkbartop.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	font-size: 1px;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//Images/layout/dingotheme/globallinkbartop.png');
+}
+
+div.GlobalLinkBarContainer div.Bottom
+{
+	width: 656px;
+	height: 4px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globallinkbarbottom.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	font-size: 1px;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/dingotheme/globallinkbarbottom.png');
+}
+
+div.GlobalLinkBarContainer div.Left
+{
+	float: left;
+	padding: 0 0 0 2px;
+	width: 654px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globallinkbarleft.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+
+div.GlobalLinkBarContainer div.Right
+{
+	float: left;
+	padding: 0 2px 0 0;
+	width: 652px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globallinkbarright.gif);
+	background-position: right top;
+	background-repeat: repeat-y;
+}
+
+div.GlobalLinkBar
+{
+	float: left;
+	width: 652px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/globallinkbarbackground.png);
+	background-position: left top;
+	background-repeat: repeat;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/dingotheme/globallinkbarbackground.png');
+}
+
+
+div.GlobalLinkBar div.ButtonContainer
+{
+	left: 50%;
+	position: relative;
+	float: left;
+	text-align: left;
+}
+
+div.GlobalLinkBar div.ButtonContainer a.GlobalRightArrowButton
+{
+	left: -50%;
+	position: relative;
+}
+
+/* Global Buttons */
+/* ------------------------------------------------- */
+
+a.GlobalButton
+{
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+	position: relative;
+	cursor: pointer;
+	float: left;
+}
+
+a.GlobalButton div.Left
+{
+	width: 15px;
+	height: 28px;
+	background-image: url(https://static.perkspot.com/images//community/friends/globalbuttonleft.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	float: left;
+	padding: 0;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//community/friends/globalbuttonleft.png');
+}
+
+a.GlobalButton div.Center
+{
+	background-image: url(https://static.perkspot.com/images//community/friends/globalbuttoncenter.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	float: left;
+	height: 18px;
+	padding: 5px 0 5px 0;
+	
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//community/friends/globalbuttoncenter.png');
+}
+
+a.GlobalButton div.Right
+{
+	width: 15px;
+	height: 28px;
+	background-image: url(https://static.perkspot.com/images//community/friends/globalbuttonright.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	float: left;
+	padding: 0;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//community/friends/globalbuttonright.png');
+}
+
+a.GlobalRightArrowButton
+{
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+	position: relative;
+	cursor: pointer;
+	float: left;
+}
+
+a.GlobalRightArrowButton div.Left
+{
+	width: 14px;
+	height: 28px;
+	background-image: url(https://static.perkspot.com/images//community/friends/globalbuttonleft.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	float: left;
+	padding: 0;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//community/friends/globalbuttonleft.png');
+}
+
+a.GlobalRightArrowButton div.Center
+{
+	background-image: url(https://static.perkspot.com/images//community/friends/globalbuttoncenter.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	float: left;
+	height: 18px;
+	padding: 5px 1px 5px 0;
+	
+	_background: none;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//community/friends/globalbuttoncenter.png');
+}
+
+a.GlobalRightArrowButton div.Right
+{
+	width: 35px;
+	height: 28px;
+	background-image: url(https://static.perkspot.com/images//community/friends/globalarrowbuttonright.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	float: left;
+	padding: 0;
+	margin: 0 0 0 -1px;
+	
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//community/friends/globalarrowbuttonright.png');
+}
+
+a.GlobalMicroButton
+{
+	float: left;
+	display: block;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalMicroButtonRight.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding: 0 2px 0 0;
+}
+
+a.GlobalMicroButton span
+{
+	font-size: 12px;
+	color: #fff;
+	font-weight: bold;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalMicroButtonLeft.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding: 1px 6px 1px 8px;
+}
+
+/* Discount Offer Condensed */
+/* ------------------------------------------------- */
+
+div.DiscountOfferCondensedContainer
+{
+	width: 652px;
+	padding: 7px 0 0 0;
+	margin: 0 0 10px 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedTop.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+div.DiscountOfferCondensed
+{
+	width: 652px;
+	padding: 0 0 12px 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedBottom.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	float: left;
+}
+
+div.DiscountOfferCondensedRight
+{
+	width: 645px;
+	padding: 0 7px 0 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedRight.gif);
+	background-repeat: repeat-y;
+	background-position: right top;
+	float: left;
+}
+
+div.DiscountOfferCondensedLeft
+{
+	width: 638px;
+	padding: 8px 0 12px 7px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedLeft.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	float: left;
+}
+
+div.DiscountOfferCondensedColumnLeft
+{
+	width: 125px;
+	text-align: center;
+	float: left;
+}
+
+div.DiscountOfferCondensedColumnLeft a
+{
+	display: block;
+}
+
+div.DiscountOfferCondensedColumnLeft span
+{
+	padding: 5px 0 0 0;
+	font-size: 10px;
+	color: #000;
+	font-weight: bold;
+	display: block;
+}
+
+div.DiscountOfferCondensedColumnLeft div.DiscountOfferCondensedRating
+{
+	margin: 10px 0 10px 0;
+	left: 50%;
+	position: relative;
+	float: left;
+}
+
+div.DiscountOfferCondensedColumnLeft div.DiscountOfferCondensedRating div.GlobalOfferRatingContainer
+{
+	left: -50%;
+	position: relative;
+}
+
+div.DiscountOfferCondensedColumnCenter
+{
+	width: 368px;
+	float: left;
+}
+
+div.DiscountOfferCondensedColumnCenter a
+{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.DiscountOfferCondensedColumnCenter div.OfferDescription
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DottedLine.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	margin: 6px 0 0 0;
+	padding: 6px 0 0 0;
+	font-size: 12px;
+	color: #000;
+	line-height: 1.5;
+}
+
+div.DiscountOfferCondensedColumnRight
+{
+	padding: 5px 15px 0 15px;
+	width: 115px;
+	float: right;
+	text-align: center;
+}
+
+div.DiscountOfferCondensedColumnRight div.Selectable
+{
+	cursor:pointer;
+}
+
+
+div.DiscountOfferCondensedColumnRight a.GlobalRightArrowButton
+{
+	float: right;
+}
+
+div.DiscountOfferCondensedColumnRight div.OfferCode
+{
+	color: #313131;
+	font-size: 12px;
+	margin: 8px 0 0 0;
+	width: 115px;
+	float: right;
+}
+
+div.DiscountOfferCondensedDetailsContainer
+{
+	width: 538px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedDetailsBackground.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+	margin: 0 22px;
+	
+	/* TODO: Can't apply display: inline fix, becuase of visibility */
+	_margin: 0 11px;
+	padding: 0 35px 15px 35px;
+	display: none;
+	float: left;
+	color: #000;
+	font-size: 12px;
+}
+
+div.DiscountOfferCondensedDetailsContainer h5
+{
+	font-weight: bold;
+	margin: 10px 0 6px 0;
+}
+
+div.DiscountOfferCondensedToggleDetailsButtonContainer
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedDetailsBottom.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 608px;
+	margin: 0 22px;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	height: 27px;
+	padding: 5px 0 0 0;
+	display: inline;
+	_margin-right: -3px;
+}
+
+div.DiscountOfferCondensedToggleDetailsButtonContainer a
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedDetailsToggle.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding: 5px 0 8px 25px;
+	display: inline-block;
+	margin: -5px 0 0 0;
+	_margin-right: -3px;
+}
+
+div.DiscountOfferCondensedToggleDetailsButtonContainer a span
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DiscountOfferCondensedDetailsToggle.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 5px 25px 8px 0;
+}
+
+/* Global Pager */
+/* ------------------------------------------------- */
+
+div.GlobalPagerContainer
+{
+	padding: 0 17px 30px 17px;
+	width: 646px;
+	float: left;
+}
+
+div.GlobalPagerLeft
+{
+	float: left;
+	height: 23px;
+	width: 3px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalPagerLeft.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	display: inline;
+}
+
+div.GlobalPagerRight
+{
+	float: left;
+	height: 23px;
+	width: 3px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalPagerRight.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	display: inline;
+}
+
+div.GlobalPager
+{
+	float: left;
+	width: 640px;
+	height: 17px;
+	padding: 4px 0 3px 0;
+	font-size: 12px;
+	color: #656565;
+	font-weight: bold;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalPagerBackground.gif);
+	background-position: top left;
+	background-repeat: repeat-x;
+	text-align: center;
+	display: inline;
+}
+
+div.GlobalPager a
+{
+	padding: 3px 3px 3px 5px;
+}
+
+div.GlobalPager a:hover
+{
+	background-color: #002B5C;
+	color: #FFF;
+}
+
+div.GlobalPager a.Selected
+{
+	color: #313131;
+	font-weight: bold;
+}
+
+div.GlobalPager a.Selected:hover
+{
+	background-color: Transparent;
+	color: #313131;
+}
+
+div.GlobalPager span
+{
+	padding: 0 3px 0 5px;
+}
+
+/* Global Notification layout */
+/* ------------------------------------------------- */
+
+div.GlobalNotificationContainer
+{
+	margin: 125px auto 0 auto;
+	width: 510px;
+}
+
+div.GlobalNotificationTop
+{
+	margin: 0 0 -2px 0;
+	width: 510px;
+	height: 7px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalNotificationTopBackground.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	font-size: 1px;
+}
+
+div.GlobalNotificationBottom
+{
+	margin: -2px 0 0 0;
+	width: 510px;
+	height: 7px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalNotificationBottomBackground.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	font-size: 1px;
+}
+
+div.GlobalNotificationLeft
+{
+	width: 505px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalBodyLeftBackground.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+	padding: 0 0 0 5px;
+}
+
+div.GlobalNotificationRight
+{
+	width: 470px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalBodyRightBackground.gif);
+	background-position: right top;
+	background-repeat: repeat-y;
+	padding: 15px 20px 15px 15px;
+	background-color: #fff;
+}
+
+/* Global Notification Panel */
+/* ------------------------------------------------- */
+
+div.GlobalNotificationPanel
+{
+	width: 618px;
+	margin: 20px 20px 0 20px;
+	padding: 15px 10px;
+	color: #333;
+	display: none;
+	font-size: 12px;
+}
+
+	div.GlobalNotificationPanel h4
+	{
+		font-weight: bold;
+		font-size: 13px;
+	}
+	
+	div.GlobalNotificationPanel p
+	{
+	}
+
+	div.GlobalNotificationPanel ul
+	{
+		list-style-position:outside;
+		list-style-type:disc;
+		margin: 7px 0 0 20px;
+	}
+
+		div.GlobalNotificationPanel ul li
+		{
+			font-weight: normal;
+		}
+
+div.GlobalNotificationPanel_Error
+{
+	border: solid 1px #DD3C10;
+	background-color: #FFEBE8;
+	display: block !important;
+}
+
+div.GlobalNotificationPanel_Warning
+{
+	border: solid 1px #DD3C10;
+	background-color: #FFEBE8;
+	display: block !important;
+}
+
+div.GlobalNotificationPanel_Confirmation
+{
+	border: solid 1px #2B9100;
+	background-color: #E6F8DD;
+	display: block !important;
+}
+
+/* Global Form layout */
+/* ------------------------------------------------- */
+
+div.GlobalFormHeader
+{
+	width: 640px;
+	float: left;
+	padding: 0 0 5px 0;
+	margin: 20px 20px 15px 20px;
+	color: #333333;
+	display: inline;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DottedLine.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+div.GlobalFormHeader h1
+{
+	font-size: 17px;
+	font-weight: bold;
+	padding: 0 0 7px 0;
+}
+
+div.GlobalFormHeader p
+{
+	padding: 0 0 10px 0;
+	font-size: 12px;
+}
+
+div.GlobalFormFieldSet
+{
+	float: left;
+	width: 640px;
+	padding: 0 20px 25px 20px;
+	font-size: 12px;
+}
+
+div.GlobalFormFieldSet table
+{
+	width: 640px;
+}
+
+div.GlobalFormFieldSet table tr td
+{
+	padding: 2px 0;
+}
+
+div.GlobalFormFieldSet table tr td.FieldLabel
+{
+	text-align: right;
+	padding: 2px 15px 2px 0;
+	width: 250px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+}
+
+div.GlobalFormFieldSet input
+{
+	border: solid 1px #CCC;
+	background-color: #FFF;
+	width: 225px;
+	padding: 2px;
+}
+
+div.GlobalFormFieldSet input.ShortField
+{
+	width: 45px !important;
+}
+
+div.GlobalFormFieldSet input.MediumField
+{
+	width: 90px !important;
+}
+
+div.GlobalFormFieldSet select
+{
+	padding: 2px;
+	border:solid 1px #CCC;
+	background-color:#FFF;
+}
+
+div.GlobalFormFieldSet textarea
+{
+	border: solid 1px #CCC;
+	background-color: #FFF;
+	width: 225px;
+	padding: 2px;
+}
+
+div.GlobalFormFieldSet .Invalid
+{
+	border: solid 1px #DD3C10;
+	background-color: #FFEBE8;
+}
+
+div.GlobalFormFieldSet a.GlobalRightArrowButton
+{
+	margin: 10px 0 0 0;
+}
+
+/* Resend Confirmation Modal */
+/* ------------------------------------------------- */
+
+div#ResendConfirmationModalContent
+{
+	display: none;
+	color: #333;
+	display: none;
+	width: 380px;
+	height: 120px;
+	padding: 0 10px 0 10px;
+}
+
+	div#ResendConfirmationModalContent h4
+	{
+		font-size: 13px;
+		font-weight: bold;
+		margin: 0 0 15px 0;
+	}
+	
+	div#ResendConfirmationModalContent p
+	{
+		font-size: 12px;
+		margin: 0 0 10px 0;
+	}
+	
+	div#ResendConfirmationModalContent div.Footer
+	{
+		margin: 5px 0 0 0;
+	}
+	
+		div#ResendConfirmationModalContent div.Footer a.GlobalButton
+		{
+			float: right;
+		}
+
+/* Login Page layout */
+/* ------------------------------------------------- */
+div.LoginPageNotificationPanelError
+{
+	width: 455px;
+	margin: 0px 0px 10px 0px;
+	padding: 15px 10px;
+	border: solid 1px #DD3C10;
+	background-color: #FFEBE8;
+	font-weight: bold;
+	color: #333333;
+}
+
+div.LoginPageNotificationPanelConfirmation
+{
+	width: 455px;
+	margin: 0px 0px 0px 0px;
+	padding: 15px 10px;
+	border: solid 1px #2B9100;
+	background-color: #E6F8DD;
+	font-weight: bold;
+	color: #333333;
+}
+
+/* Utility Page layout */
+/* ------------------------------------------------- */
+
+div.UtilityPageNotificationPanelError
+{
+	width: 618px;
+	margin: 20px 20px 0 20px;
+	padding: 15px 10px;
+	border: solid 1px #DD3C10;
+	background-color: #FFEBE8;
+	font-weight: bold;
+	color: #333333;
+	display: none;
+}
+
+div.UtilityPageNotificationPanelConfirmation
+{
+	width: 618px;
+	margin: 20px 20px 0 20px;
+	padding: 15px 10px;
+	border: solid 1px #2B9100;
+	background-color: #E6F8DD;
+	font-weight: bold;
+	color: #333333;
+}
+
+div.UtilityPageHeader
+{
+	width: 640px;
+	float: left;
+	padding: 0 0 8px 0;
+	margin: 20px 20px 15px 20px;
+	color: #333333;
+	display: inline;
+}
+
+div.UtilityPageHeader h1
+{
+	font-size: 17px;
+	font-weight: bold;
+	padding: 0 0 7px 0;
+}
+
+div.UtilityPageHeader p
+{
+	padding: 0 0 10px 0;
+	font-size: 12px;
+}
+
+div.UtilityPageContentContainer
+{
+	float: left;
+	padding: 0 20px 20px 20px;
+	display: inline;
+}
+
+div.UtilityPageFormSection
+{
+	margin: 0 0 20px 0;
+	float: left;
+	width: 640px;
+	display: inline;
+}
+
+div.UtilityPageFormSection div.SectionTitle
+{
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DottedLine.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	padding: 0 0 6px 0;
+	margin: 0 0 5px 0;
+	color: #002B5C;
+	width: 640px;
+	float: left;
+	display: inline;
+}
+
+div.UtilityPageFormSection div.SectionTitle span
+{
+	float: left;
+	display: block;
+	width: 300px;
+}
+
+div.UtilityPageFormSection div.SectionTitle a
+{
+	float: right;
+	font-weight: normal;
+	text-align: right;
+}
+
+div.UtilityPageFormSection div.FormSectionItem
+{
+	font-size: 12px;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit
+{
+	display: none;
+	float: left;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit div.EditHeader
+{
+	width: 640px;
+	margin: 0 0 25px 0;
+	font-size: 12px;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit div.EditHeader ul
+{
+	margin: 0 0 0 20px;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit div.EditHeader ul li
+{
+	list-style-type: disc;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit table
+{
+	width: 640px;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit table tr
+{
+
+}
+
+div.UtilityPageFormSection div.FormSectionEdit table tr td
+{
+	padding: 2px 0;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit table tr td.First
+{
+	text-align: right;
+	padding: 2px 15px 2px 0;
+	width: 250px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit input
+{
+	border: solid 1px #CCC;
+	background-color: #FFF;
+	width: 225px;
+	padding: 2px;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit span.Checkbox input
+{
+	width: auto;
+	padding: 0px;
+	margin: 5px 5px 5px 0;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit .Invalid
+{
+	border: solid 1px #DD3C10;
+	background-color: #FFEBE8;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit select
+{
+	padding: 2px;
+	border:solid 1px #CCC;
+	background-color:#FFF;
+}
+
+div.UtilityPageFormSection div.FormSectionEdit textarea
+{
+	border: solid 1px #CCC;
+	background-color: #FFF;
+	width: 225px;
+	padding: 2px;
+
+}
+
+div.UtilityPageFormSection div.FormSectionEdit a.GlobalRightArrowButton
+{
+	margin-top: 10px;
+}
+
+/* Global Offer Rating */
+/* ------------------------------------------------- */
+
+div.GlobalOfferRatingContainer
+{
+	float: left;
+	background-image:url(https://static.perkspot.com/images//community/friends/globalratingstars.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 83px;
+	height: 15px;
+}
+
+div.GlobalOfferRatingContainer a
+{
+	display: block;
+	float: left;
+	width: 17px;
+	height: 15px;
+	#font-size: 1px;
+}
+
+div.GlobalOfferRatingContainer a.Last
+{
+	width: 15px;
+}
+
+/* Global Module */
+/* ------------------------------------------------- */
+
+div.GlobalModuleContainer
+{
+	margin: 20px 16px 0 16px;
+	float: left;
+	display: inline;
+}
+
+div.GlobalModuleHeader
+{
+	width: 616px;
+	height: 15px;
+	padding: 5px 16px 4px 16px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalModuleTop.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	color: #505050;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.GlobalModule
+{
+	width: 648px;
+	padding: 0 0 6px 0;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalModuleBottom.gif);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+
+div.GlobalModuleLeft
+{
+	width: 640px;
+	float: left;
+	padding: 0 0 0 4px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalModuleLeft.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+
+div.GlobalModuleRight
+{
+	width: 644px;
+	float: left;
+	padding: 0 4px 0 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/GlobalModuleRight.gif);
+	background-position: right top;
+	background-repeat: repeat-y;
+}
+
+/* Inbox Manager layout */
+/* ------------------------------------------------- */
+
+div.InboxManagerItem
+{
+	float: left;
+}
+
+div.InboxManagerItemRow
+{
+	width: 640px;
+	height: 26px;
+	float: left;
+	overflow:hidden;
+	font-size: 12px;
+	cursor: pointer;
+	border-top: solid 1px #d9d9d9;
+}
+
+div.InboxManagerItemRow div
+{
+	float: left;
+	height: 14px;
+	padding: 5px 0 6px 11px;
+	overflow: hidden;
+}
+
+div.InboxManagerItemRow div.StatusIcon
+{
+	width: 14px;
+	background-position: 11px center;
+	background-repeat: no-repeat;
+}
+
+div.InboxManagerItemRow div.StatusIcon_Unread
+{
+	background-image:url(https://static.perkspot.com/images//layout/dingotheme/InboxManagerUnreadIcon.gif);
+}
+
+div.InboxManagerItemRow div.StatusIcon_Read
+{
+	background-image:url(https://static.perkspot.com/images//layout/dingotheme/InboxManagerReadIcon.gif);
+}
+
+div.InboxManagerItemRow div.MessageSubject
+{
+	color: #002B5C;
+	width: 540px;
+}
+
+div.InboxManagerItemRow div.MessageDate
+{
+	color: #585858;
+	text-transform: uppercase;
+	width: 42px;
+	padding-right: 11px;
+}
+
+div.InboxManagerItemMessage
+{
+	display: none;
+	width: 610px;
+	padding: 15px;
+	float: left;
+	font-size: 12px;
+	color: #000;
+}
+
+/* Benefit Widget layout */
+/* ------------------------------------------------- */
+
+div.BenefitWidgetContainer
+{
+	border-top: solid 1px #d9d9d9;
+	width: 640px;
+	position: relative;
+	float: left;
+}
+
+div.BenefitWidgetNavigation
+{
+	float: left;
+	width: 225px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/BenefitWidgetNavigationBackground.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding: 15px 0 0 0;
+}
+
+div.BenefitWidgetNavigation ul
+{
+	width: 225px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/BenefitWidgetNavigationBackground.gif);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	padding: 0 0 30px 0;
+	margin: 0 -20px 0 0;
+	float: left;
+}
+
+div.BenefitWidgetNavigation ul li
+{
+	float: left;
+}
+
+div.BenefitWidgetNavigation ul li a
+{
+	font-weight: bold;
+	font-size: 13px;
+	padding: 11px 0 11px 25px;
+	float: left;
+	width: 200px;
+	border-top: solid 1px #fff;
+	border-bottom: solid 1px #e1e1e1;
+}
+
+div.BenefitWidgetNavigation ul li a.First
+{
+	border-top: 0;
+	padding-top: 12px;
+}
+
+div.BenefitWidgetNavigation ul li a.Last
+{
+	border-bottom: 0;
+	padding-bottom: 12px;
+}
+
+div.BenefitWidgetNavigation ul li a.Selected
+{
+	background-image: url(https://static.perkspot.com/images//layout/TEMP_BenefitWidgetSelectedIndicator.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: #fff;
+	width: 215px;
+	margin: 0 0 -4px -5px;
+	padding: 12px 0 16px 30px;
+	border: 0;
+	position: relative;
+}
+
+div.BenefitWidgetPage
+{
+	float: left;
+	width: 340px;
+	padding: 20px 30px 56px 45px;
+}
+
+div.BenefitWidgetPage h1
+{
+	font-size: 22px;
+	margin: 0 0 12px 0;
+	color: #002B5C;
+}
+
+div.BenefitWidgetPage h1 a:hover
+{
+	text-decoration: underline;
+}
+
+div.BenefitWidgetPage p
+{
+	color: #4d4d4d;
+	margin: 0 0 12px 0;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+div.BenefitWidgetPage div.PageGroupContainer
+{
+	width: 155px;
+	margin: 5px 15px 0 0;
+	float: left;
+	display: inline;
+}
+
+div.BenefitWidgetPage div.PageGroupContainer span.GroupName
+{
+	text-transform: uppercase;
+	color: #1d1d1d;
+	font-weight: bold;
+}
+
+div.BenefitWidgetPage div.PageGroupContainer ul
+{
+	padding: 14px 0 20px 0;
+	font-size: 12px;
+}
+
+div.BenefitWidgetPage div.PageGroupContainer ul li
+{
+}
+
+div.BenefitWidgetPage div.PageGroupContainer ul li a
+{
+	display: block;
+	padding: 2px 0 2px 21px;
+	font-weight: normal;
+	font-size: 12px;
+	background-image:url(https://static.perkspot.com/images//layout/dingotheme/InsuranceNavigationBullet.png);
+	background-position: 10px 8px;
+	background-repeat: no-repeat;
+}
+
+div.BenefitWidgetPage div.PageGroupContainer ul li a:hover
+{
+	text-decoration: underline;
+}
+
+div.BenefitWidgetButtonBar
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 375px;
+	margin: 0 0 0 20px;
+	float: left;
+	height: 39px;
+	padding: 12px 20px 0 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/BenefitWidgetButtonBarBackground.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+
+div.BenefitWidgetButtonBar a.GlobalRightArrowButton
+{
+	float: right;
+}
+
+table.HomeDiscountModule
+{
+	width: 640px;
+	float: left;
+}
+
+table.HomeDiscountModule tr td
+{
+	width: 85px;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 10px 15px 10px;
+}
+
+table.HomeDiscountModule tr td.FirstRow
+{
+	padding-top: 10px;
+	padding-bottom: 0;
+}
+
+table.HomeDiscountModule tr td
+{
+}
+
+table.HomeDiscountModule tr td.Seperator
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/HomeDiscountModuleItemSeperator.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	width: 2px;
+	padding: 0;
+}
+
+
+
+
+
+div.HomeDiscountModule div
+{
+	height: 103px;
+	width: 86px;
+	padding: 0 10px;
+	float: left;
+
+	text-align: center;
+	font-size: 12px;
+}
+
+
+
+div.HomeDiscountModule div.First
+{
+	background-image: none;
+}
+
+div.HomeEnrollmentStatus div.GraphContainer
+{
+	width: 165px;
+	padding: 15px 15px 15px 20px;
+	border-bottom: 1px solid #E1E1E1;
+	float: left;
+}
+
+div.HomeEnrollmentStatus div.GraphContainer h3
+{
+	color: #6a6a6a;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+div.HomeEnrollmentStatus div.GraphContainer h3 span
+{
+	float: right;
+	text-align: right;
+	font-weight: normal;
+	color: #919191;
+}
+
+div.HomeEnrollmentStatus div.GraphContainer div.Graph
+{
+	float: left;
+	width: 165px;
+	height: 17px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/EnrollmentStatusGraphBackground.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	margin: 6px 0 0 0;
+}
+
+div.HomeEnrollmentStatus div.GraphContainer div.Graph div.Bar
+{
+	height: 17px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/EnrollmentStatusGraphIndicator.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+div.HomeEnrollmentStatus div.EnrollmentLink
+{
+	float: left;
+	width: 165px;
+	padding: 15px 15px 15px 20px;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+div.HomeEnrollmentStatus div.EnrollmentLink a
+{
+	font-weight: bold;
+	font-size: 12px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/EnrollmentLinkButtonBackground.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding: 10px 3px 0 0;
+	height: 26px;
+	width: 162px;
+	text-align: center;
+	float: left;
+}
+
+div.HomeEnrollmentStatus ul.EnrollmentCheckList
+{
+	padding: 12px 15px 6px 20px;
+	width: 165px;
+	border-bottom: 1px solid #E1E1E1;
+	float: left;
+}
+
+div.HomeEnrollmentStatus  ul.EnrollmentCheckList li span
+{
+	padding: 0 0 8px 22px;
+	color: #686868;
+	font-size: 12px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	float: left;
+	width: 143px;
+}
+
+div.HomeEnrollmentStatus  ul.EnrollmentCheckList li span.Status_Enrolled
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/EnrollmentChecklistIcon_Enrolled.gif);
+}
+
+div.HomeEnrollmentStatus  ul.EnrollmentCheckList li span.Status_NotStarted
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/EnrollmentChecklistIcon_NotStarted.gif);
+}
+
+div.HomeEnrollmentStatus ul.EnrollmentCheckList li span.Status_Declined
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/EnrollmentChecklistIcon_Declined.gif);
+}
+
+/* Modal Window */
+/* ------------------------------------------------- */
+
+div.ModalWindowOverlay
+{
+	position:fixed;  
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background:#000000;
+	opacity:.40;
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.40;
+	z-index:999998;
+	display: none;
+	
+	_position: absolute;
+	-overflow-y: hidden;
+}
+
+div.ModalWindowContainer
+{
+	position: fixed;
+	_position: absolute;
+	z-index: 999999;
+	display: none;
+}
+
+div.ModalWindowLoadingIndicator
+{
+	display: none;
+	margin: 196px auto 0 auto;
+	width: 32px;
+	height: 32px;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/ModalLoadingIndicator.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+div.ModalWindowContainer .ModalTopLeft
+{
+	height: 10px;
+	width: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalTopLeft.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalTopLeft.png');
+}
+
+div.ModalWindowContainer .ModalTop
+{
+	height: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalTop.png);
+    background-repeat: repeat-x;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalTop.png');
+}
+
+div.ModalWindowContainer .ModalTopRight
+{
+	height: 10px;
+	width: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalTopRight.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalTopRight.png');
+
+}
+
+div.ModalWindowContainer .ModalLeft
+{
+	height: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalLeft.png);
+    background-repeat: repeat-y;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalLeft.png');
+}
+
+div.ModalWindowContainer .ModalLeft div
+{
+	width: 10px;
+}
+
+div.ModalWindowContainer .ModalContent
+{
+}
+
+div.ModalWindowContainer .ModalRight
+{
+	height: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalRight.png);
+    background-repeat: repeat-y;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalRight.png');
+
+}
+
+div.ModalWindowContainer .ModalRight div
+{
+	width: 10px;
+}
+
+div.ModalWindowContainer .ModalBottomLeft
+{
+	height: 10px;
+	width: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalBottomLeft.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    
+    _font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalBottomLeft.png');
+
+}
+
+div.ModalWindowContainer .ModalBottom
+{
+	height: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalBottom.png);
+    background-repeat: repeat-x;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalBottom.png');
+
+}
+
+div.ModalWindowContainer .ModalBottomRight
+{
+	height: 10px;
+	width: 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ModalBottomRight.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    
+	_font-size: 0px;
+	#background: none;
+	#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://static.perkspot.com/images//images/layout/newlayout/ModalBottomRight.png');
+
+}
+
+div.ModalWindowContentContainer
+{
+	background-color: #FFF;
+}
+
+div.ModalWindowContentContainer iframe
+{
+	width: 100%;
+	height: 100%;
+	border:0px;
+}
+
+div.ModalWindowHeader
+{
+	position: relative;
+	height: 20px;
+	background-color: #FFF;
+}
+
+a.ModalCloseButton
+{
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 3px;
+	color: gray;
+	font-family:Verdana,Helvetica,Arial;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+a.ModalCloseButton:hover
+{
+	color: #000;
+}
+
+div.ModalContentContainer
+{
+	background-image:url(https://static.perkspot.com/images//community/friends/bg-sprite.png);
+	background-position: left top;
+	background-repeat: repeat-y;
+	background-color: #000;
+	width: 780px;
+	height: 360px;
+	margin: 10px 10px 0 10px;
+	border-bottom: solid 1px #cacaca;
+	float: left;
+	display: inline;
+}
+
+div.ModalContentContainer a.PageButton
+{
+	display: block;
+	float: left;
+	height: 360px;
+	width: 39px;
+	background-position: left -362px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+div.ModalContentContainer a.PrevButton
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/ModalPagePreviousButton.gif);
+}
+
+div.ModalContentContainer a.NextButton
+{
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/ModalPageNextButton.gif);
+}
+
+div.ModalContentContainer a.PageButton:hover
+{
+	background-position: left -723px;
+}
+
+div.ModalContentContainer a.Disabled
+{
+	background-position: left -1px;
+	cursor: default;
+}
+
+div.ModalContentContainer a.Disabled:hover
+{
+	background-position: left -1px;
+}
+
+div.ModalContentContainer div.CarouselContainer
+{
+	float: left;
+	height: 360px;
+	overflow: hidden;
+}
+
+div.ModalContentContainer div.CarouselContainer_Single
+{
+	width: 780px;
+}
+
+div.ModalContentContainer div.CarouselContainer_Multi
+{
+	width: 702px;
+}
+
+div.ModalContentContainer div.CarouselContainer h1, div.ModalContentContainer div.CarouselContainer h2, div.ModalContentContainer div.CarouselContainer h3, div.ModalContentContainer div.CarouselContainer h4, div.ModalContentContainer div.CarouselContainer h5, div.ModalContentContainer div.CarouselContainer h6
+{
+	margin: 10px 0 0 0;
+	font-size: 21px;
+}
+
+div.ModalContentContainer div.CarouselContainer p
+{
+	margin: 10px 0 0 0;
+}
+
+div.ModalContentContainer div.Carousel
+{
+	width: 100000px;
+	height: 360px;
+}
+
+div.ModalPage
+{
+	height: 350px;
+	float: left;
+	color: #fff;
+	padding: 10px 20px 0px 20px;
+	text-align: left;
+	overflow: auto;
+}
+
+div.ModalPage_Single
+{
+	width: 740px;
+}
+
+div.ModalPage_Multi
+{
+	width: 662px;
+}
+
+div.ModalButtonsContainer
+{
+	width: 718px;
+	padding: 8px 30px 6px 30px;
+	height: 28px;
+	margin: 0 10px 10px 10px;
+	border: solid 1px #d5d5d5;
+	border-top: solid 1px #fff;
+	float: left;
+	background-color: #e6e6e6;
+	display: inline;
+}
+
+div.ModalButtonsContainer a.GlobalButton
+{
+	float: right;
+	margin: 0 7px;
+}
+
+/* TEMP - Interstitial layout */
+/* ------------------------------------------------- */
+
+div.InterstitialOfferInstructionsWrapper
+{
+}
+
+div.InterstitialColumnLabel
+{
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+
+
+
+
+
+
+/* External Master */
+
+body.External
+{
+	background-color: #e6e6e6;
+}
+
+div.External-Header
+{
+	height:80px;
+	background-color:#FFFFFF;
+}
+
+div.External-Header a
+{
+	display:block;
+	width:250px;
+	padding:15px 0;
+	
+	margin:0 auto;
+	text-align:center;
+}
+
+div.External-Header a img
+{
+	height:50px;
+	border:none;	
+	margin:0 auto;
+}
+
+div.External-HeaderBorder
+{
+	font-size:1px;
+	height:1px;
+	background-color:#BBBBBB;
+	border-bottom:1px solid #DDDDDD;
+	
+	margin:0 0 40px 0;
+}
+
+div.External-Content
+{
+		
+}
+
+
+
+
+
+
+/* OLD */
+
+div.ExternallayoutContainer
+{
+	width: 514px;
+	margin: 0 auto;
+}
+
+div.ExternalHeaderContainer
+{
+	width: 507px;
+	padding: 0 0 0 7px;
+	background-color: #FFF;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/layoutShadowLeft.gif);
+    background-repeat: repeat-y;
+    background-position: left top;
+    float: left;
+}
+
+div.ExternalHeader
+{
+	width: 500px;
+	padding: 0 7px 0 0;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/layoutShadowRight.gif);
+    background-repeat: repeat-y;
+    background-position: right top;
+    float: left;
+}
+
+div.ExternalHeader table
+{
+	width: 500px;
+	height: 155px;
+}
+
+div.ExternalHeader table tr
+{
+	width: 500px;
+	height: 155px;
+	text-align: center;
+}
+
+div.ExternalHeader table tr td
+{
+	width: 500px;
+	height: 155px;
+	vertical-align: middle;
+}
+
+div.ExternallayoutBottom
+{
+	height: 15px;
+	width: 514px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/ExternallayoutShadowBottom.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    float: left;
+}
+
+div.ExternallayoutTop
+{
+	height: 29px;
+	width: 494px;
+	padding: 18px 0 0 20px;
+	background-image:url(https://static.perkspot.com/images//community/friends/theme-sprite.png);
+    background-repeat: no-repeat;
+    background-position: left -143px;
+    float: left;
+    margin: 15px 0 0 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    position: relative;
+    font-weight: bold;
+}
+
+div.ExternallayoutTop .TopLeft
+{
+	position: absolute;
+	top: 15px;
+	left: 0px;
+	width: 6px;
+	height: 33px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/layoutShadowLeft.gif);
+    background-repeat: repeat-y;
+    background-position: left top;
+}
+
+div.ExternallayoutTop .TopRight
+{
+	position: absolute;
+	width: 6px;
+	height: 33px;
+	top: 15px;
+	right: 0px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/layoutShadowRight.gif);
+    background-repeat: repeat-y;
+    background-position: right top;
+}
+
+
+div.ExternalBodyContainer
+{
+	width: 507px;
+	padding: 0 0 0 7px;
+	background-color: #FFF;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/layoutShadowLeft.gif);
+    background-repeat: repeat-y;
+    background-position: left top;
+    float: left;
+}
+
+div.ExternalBody
+{
+	width: 480px;
+	padding: 10px 17px 10px 10px;
+	background-image:url(https://static.perkspot.com/images//layout/Newlayout/layoutShadowRight.gif);
+    background-repeat: repeat-y;
+    background-position: right top;
+    float: left;
+    font-size: 12px;
+}
+
+div.ExternalBody td
+{
+    padding:3px;
+}
+
+div.ExternalBody a.SquareButton
+{
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;	
+	background-image:url(https://static.perkspot.com/images//community/friends/theme-sprite.png);
+	background-repeat: no-repeat;
+	background-position: -0 -103px;
+	padding: 5px 39px 5px 20px;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 16px;
+}
+
+div.ExternalBody a.SquareButton span
+{
+	background-image:url(https://static.perkspot.com/images//community/friends/theme-sprite.png);
+	background-repeat: no-repeat;
+	background-position: -168px -103px;
+	height: 26px;
+	width: 39px;
+	position: absolute;
+	right: -1px;
+	top: 0;
+}
+
+div.ExternalFooterContainer
+{
+	color:#FFF;
+    padding:20px;
+	width: 475px;
+    text-align:center;
+    float: left;
+}
+
+/* Restaurants layout */
+/* ------------------------------------------------- */
+
+div.RestaurantsWrapper
+{
+	background-color: #fff;
+	float: left;
+	width: 838px;
+	border: solid 1px #E6E6E6;
+}
+
+div.RestaurantsBody
+{
+	float: left;
+	width: 838px;
+}
+
+div.RestaurantsColLeft
+{
+	width: 289px;
+	float: left;
+	border-right: solid 1px #CCCCCC;
+}
+
+div.RestaurantsColRight
+{
+	width: 548px;
+	float: Left;
+	background-image:url(Images/layout/RestaurantsLeftShadow.gif);
+	background-position: left top;
+	background-repeat: repeat-y;
+	overflow: hidden;
+}
+
+div.RestaurantsColRightContainer
+{
+	position: relative;
+}
+
+div.RestaurantsControlsContainer
+{
+	width:277px;
+	padding: 0 0 0 12px;
+	border-bottom: solid 1px #CCCCCC;
+	font-size: 11px;
+	float:left;
+	background-color: #fff;
+}
+
+div.RestaurantsControlsContainer div
+{
+	padding:8px 8px 8px 0;
+	float: left;
+}
+
+span.RestaurantsLoadingImage
+{
+	display:block; 
+	margin: 8px 10px 0 0;
+	width:16px;
+	height:16px; 
+	background-image:url(https://static.perkspot.com/images//animated/loading.gif); 
+	display:none; 
+	float:right;
+}
+
+span.RestaurantsFilterCancel
+{
+	display: none;
+	margin: 8px 10px 0 0;
+	width: 16px;
+	height: 16px;
+	background-image:url(https://static.perkspot.com/images//layout/RestaurantsCancelSort.gif); 
+	background-position: center center;
+	background-repeat: no-repeat;
+	float:right;
+	cursor: pointer;
+}
+
+div.RestaurantsMapContainer
+{
+	/* Width and Height Values hardcoded to page for GMAPS and Chrome */
+}
+
+div.RestaurantsPagingControlsContainer
+{
+	padding: 8px 0 8px 0;
+	border-top: solid 1px #CCC;
+	text-align: center;
+	float:left;
+	width: 289px;
+	font-size: 13px;
+	height: 22px;
+}
+
+div.RestaurantsPagerHelper
+{
+	float: left;
+	left: 50%;
+	position: relative;
+	text-align: left;
+}
+
+div#RestaurantsPager
+{
+	left: -50%;
+	position: relative;
+}
+
+div.RestaurantsPagingControlsContainer div
+{
+	float: left;
+}
+
+div.RestaurantsPagingControlsContainer div.PagerContainer
+{
+}
+
+div.RestaurantsPagingControlsContainer div.PagerContainer a
+{
+	display: block;
+	padding: 3px 4px;
+}
+
+div.RestaurantsPagingControlsContainer div.PagerContainer a:hover
+{
+	background-color: #002B5C;
+	color: #fff;
+}
+
+div.RestaurantsPagingControlsContainer div.PagerEllipses
+{
+	margin: 0 3px;
+}
+
+div.RestaurantsPagingControlsContainer div.PagerContainerSelected a
+{
+	display: block;
+	padding: 3px 4px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+div.RestaurantsPagingControlsContainer div.PagerContainerSelected a:hover
+{
+	background-color: #002B5C;
+	color: #fff;
+}
+
+div.RestaurantDetailsContainerColumnLeft
+{
+	width: 170px;
+	float: left;
+	margin: 15px 0 0 0;
+}
+
+div.RestaurantsCertificateContainer
+{
+	background-image:url(https://static.perkspot.com/images//community/friends/bg-sprite.png);
+	background-position: left top;
+	background-repeat: repeat-y;
+	width: 170px;
+	float: left;
+	text-align: center;
+	padding: 15px 0 2px 0;
+	color: #fff;
+}
+
+div.RestaurantsCertificateContainer h2
+{
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 12px 0;
+}
+
+div.RestaurantsCertificateContainer div.Certificate
+{
+	width: 140px;
+	text-align: left;
+	margin: 0 15px;
+	float: left;
+	height: 40px;
+	display: inline;
+}
+
+div.RestaurantsCertificateContainer div.Certificate input
+{
+	margin: 8px 10px 18px 0;
+	float: left;
+	width: 13px;
+	height: 13px;
+}
+
+div.RestaurantsCertificateContainer div.Certificate span
+{
+	float: left;
+	width: 117px;
+	height: 29px;
+	font-size: 12px;
+	margin: 0 0 10px 0;
+}
+
+div.RestaurantsCertificateContainer div.ButtonContainer
+{
+	margin: 4px 0 15px 0;
+	left: 50%;
+	position: relative;
+	float: left;
+	text-align: left;
+}
+
+div.RestaurantsCertificateContainer div.ButtonContainer a.GlobalRightArrowButton
+{
+	left: -50%;
+	position: relative;
+}
+
+div.RestaurantsCertificateContainer span.RestaurantsRestrictions
+{
+	display: block;
+	color: #000;
+	float: left;
+	width: 156px;
+	padding: 7px 5px;
+	margin: 0 2px 0 2px;
+	background-color: #fff;
+	font-size: 12px;
+	display: inline;
+}
+
+div.RestaurantDetailsContainerColumnRight
+{
+	width: 315px;
+	float: left;
+	margin: 15px 0 0 20px;
+}
+
+div.RestaurantDetailsContainerColumnRight h2
+{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+div.RestaurantDetailsContainerColumnRight p
+{
+	font-size: 12px;
+	margin: 0 0 10px 0;
+}
+
+div.RestaurantDetailsContainerColumnRight p.RestaurantDescription
+{
+	padding: 20px 0 0 0;
+	background-image: url(https://static.perkspot.com/images//layout/dingotheme/DottedLine.gif);
+	background-repeat: repeat-x;
+	background-position: left 5px;
+}
+
+
+
+/* ############### */
+/* #<Restaurants># */
+/* ############### */
+
+.RestaurantsDdContainer
+{
+	padding: 0 12px 12px 0;
+	position: absolute;
+	display: none;
+	z-index: 999;
+}
+
+.RestaurantsControlsContainer a
+{
+	color: #000000; 
+	font-size: 12px; 
+	background-image:url(https://static.perkspot.com/images//layout/SelectArrow.gif); 
+	background-position: right 6px;
+	background-repeat: no-repeat; 
+	padding-right: 10px; 
+	padding-left: 3px;
+}
+
+.RestaurantsSortContainer
+{
+	float: left;
+	height:25px;
+	width: 289px;
+	
+	border-bottom:solid 1px #CCCCCC;
+	
+	font-size:12px;
+	
+	background-image:url(https://static.perkspot.com/images//layout/RestaurantsSortBackground.gif);
+	background-repeat:repeat-x;
+	background-color:#777777;
+}
+
+.RestaurantsSort
+{
+	float:left;
+	
+	cursor:pointer;
+	color:#999999;
+	
+	width:144px;
+	padding: 5px 0;
+	
+	float:left;
+	
+	background-color: #EEE;
+	
+	text-align:center;
+}
+
+.RestaurantsSortHover
+{
+	background-color:#999999;
+	color:#FFFFFF;
+}
+
+.RestaurantsSortSeperator
+{
+	height:25px; 
+	width:1px; 
+	float:left; 
+
+	background-color:#CCCCCC;
+}
+
+.RestaurantsSortSelected
+{
+	color:#FFFFFF; 
+	background-color: transparent;
+	
+	width: 142px;
+	border-right:solid 1px #777;
+	border-left:solid 1px #777;
+	
+	background-image:url(https://static.perkspot.com/images//layout/RestaurantsSortArrows.gif); 
+	background-repeat: no-repeat;
+}
+
+.ArrowDescending
+{
+	background-position: 117px -25px;
+}
+
+.ArrowAscending
+{
+	background-position: 117px 0;
+}
+
+.RestaurantsDd
+{
+	padding: 7px;
+	border: 1px solid #ABABAB;
+	font-size: 12px;
+	background-color: #FFF;
+	float: left;
+}
+
+.RestaurantsDd a.GlobalButton
+{
+	margin: 0 0 0 5px;
+	#width: 48px;
+}
+
+.RestaurantsDd ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.RestaurantsDd ul li a
+{
+	display: block;
+	width: 82px;
+	padding: 2px 5px 2px 5px;
+	text-decoration: none;
+	color: #000;
+}
+
+.AlphabetListContainer
+{
+	width: 133px;
+}
+
+.AlphabetListContainer a
+{
+	display:block;
+	float:left;
+	text-align: center;
+	text-decoration: none;
+	padding: 2px 4px 2px 4px;
+	color: #000;
+	width: 11px;
+	text-transform: lowercase;
+}
+
+.AlphabetListContainer a:hover
+{
+	background-color: #EBEBEB;
+}
+
+.AlphabetListContainer .AlphabetListItemNumber
+{
+	width: 30px;
+}
+
+.RestaurantsDd ul li .ParentSelect
+{
+	padding: 2px 20px 2px 5px;
+	background-image:url(Images/layout/SelectArrowRight.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.RestaurantsDd ul li a:hover
+{
+	background-color: #EBEBEB;
+}
+
+.RestaurantsListContainer
+{
+	height:530px;
+	clear: both;
+	background-color:#BBBBBB;
+}
+
+.RestaurantsListItemContainer
+{
+	padding: 5px 12px 5px 12px;
+	font-size: 11px;
+	cursor: pointer;
+	float: left;
+	background-color:#FFFFFF;
+}
+
+.RestaurantsListItemHover
+{
+	background-color:#EEEEEE;
+}
+
+.RestaurantsListItemSelected
+{
+	padding: 5px 12px 5px 12px;
+	font-size: 11px;
+	cursor:pointer;
+	background-color:#DDDDDD;
+}
+
+.RestaurantsListItemContent
+{
+	float: left;
+	width: 240px;
+}
+
+.RestaurantsListItemLine
+{
+	width: 238px;
+	height: 14px;
+	overflow:hidden;
+}
+
+.RestaurantsListEmptyContent
+{
+	display:none;
+	width:269px;
+	color:#3A3A3A;
+	
+	padding:10px;
+}
+
+.RestaurantsListItemMarker
+{
+	float: left;
+	width: 25px;
+	margin: 5px 0 0 0;
+}
+
+.RestaurantsListItemContainer a
+{
+	text-decoration: none;
+}
+
+.RestaurantsListItemName
+{
+	display:block;
+	width: 240px;
+	height: 15px;
+	overflow:hidden;
+	font-size: 12px;
+}
+
+.RestaurantsListItemContainer Span
+{
+	color:#8A8A8A;
+}
+
+.RestaurantsDetailsContainer
+{
+	margin: 0 15px 0 0;
+	width: 505px;
+	overflow:hidden;
+}
+
+.RestaurantsCertificateItemContainer
+{
+	position:absolute;
+    display:none;	
+    width:214px;
+    
+    border:solid 1px #777777;
+    border-top:none;
+    background-color:#F0F0F0;
+}
+
+.RestaurantsCertificateSelectedItem
+{
+    padding:5px;
+    width:178px;
+    float:left;
+   
+   background-image:url(https://static.perkspot.com/images//layout/RestaurantsDdLeftBg.gif);
+   background-repeat:repeat-x;
+}
+
+.RestaurantsCertificateItem
+{
+    padding:5px;
+    color:#5B5B5B;
+    width: 204px;
+}
+
+.RestaurantsCertificateItemOver
+{
+	color:#000000;
+	background-color:#FFFFFF;
+}
+
+.RestaurantsCertificateDropDown
+{
+	height:25px;
+	width:25px;
+	float:left;	
+    border-left:solid 1px #777777;
+    
+	background-image:url(https://static.perkspot.com/images//layout/RestaurantsDdRightBg.gif);
+	background-repeat:repeat-x;
+}
+
+.RestaurantsCertificateDropDown span
+{
+	display:block;
+	
+	padding-top:9px;
+	padding-left:6px;
+	height:7px;
+	width:13px;
+    
+	background-image:url(https://static.perkspot.com/images//layout/RestaurantsDdlRightBg.gif);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	
+}
+
+.RestaurantsInfoWindowTerms
+{
+	height:35px; 
+	padding:5px; 
+	font-size:10px;
+}
+
+.RestaurantsInfoWindowTerms span
+{
+	display:block;
+	margin-bottom:4px;
+}
+
+.RestaurantsRatingContainer
+{
+	height:51px;
+	border-top:solid 1px #DDDDDD;	
+	
+	font-size:17px;
+	background-color:#EEEEEE;
+}
+
+.RestaurantsRatingContainer span
+{
+	display:block;
+	float:left; 
+	padding-top:15px;
+}
+
+/* ################ */
+/* #</Restaurants># */
+/* ################ */
+
+/* #################### */
+/* #<Group Code Modal># */
+/* #################### */
+
+.GroupCodeModalWrapper
+{
+	text-align: center;
+	padding: 0 0 15px 0;
+	* width: 400px;
+	* padding: 0;
+	* margin: 0 0 -17px 0;
+}
+
+.GroupCodeModalWrapper a.SquareButton
+{
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;	
+	background-image:url(https://static.perkspot.com/images//community/friends/theme-sprite.png);
+	background-repeat: no-repeat;
+	background-position: -0 -103px;
+	padding: 5px 39px 5px 20px;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 16px;
+}
+
+.GroupCodeModalWrapper a.SquareButton span
+{
+	background-image:url(https://static.perkspot.com/images//community/friends/theme-sprite.png);
+	background-repeat: no-repeat;
+	background-position: -168px -103px;
+	height: 26px;
+	width: 39px;
+	position: absolute;
+	right: -1px;
+	top: 0;
+	display: block !important;
+}
+
+.GroupCodeModalHeader
+{
+	font-weight: bold;
+	font-size: 14px;
+	padding: 0 0 15px 0;
+}
+
+.GroupCodeModalColumn
+{
+	width: 170px;
+	padding: 15px 15px 25px 15px;
+}
+
+.GroupCodeModalColumnRight
+{
+	text-align: left;
+	border-left: solid 1px #CCC;
+	width: 169px;
+}
+
+.GroupCodeModalColumn p
+{
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+/* ##################### */
+/* #</Group Code Modal># */
+/* ##################### */
+
+/* External Notification */
+
+
+
+
+/* External Notification */
+
+    div.ExternalNotification-Container
+    {
+        color: #333333;
+        margin: 20px auto 15px auto;
+        padding: 5px 20px 15px 20px;
+        width: 450px;
+        line-height: 18px;
+        font-weight: normal;
+    }
+
+div.ExternalNotification-Container h5 {
+            margin: 10px 0 0 0;
+        font-size: 14px;
+        font-weight: bold;
+                font-weight: bold;
+}
+
+        div.ExternalNotification-Container p {
+            padding: 10px 0 0 0;
+        }
+
+        div.ExternalNotification-Container ul {
+                    margin: 10px 0 0 16px;
+        list-style-type: disc;
+        list-style-position: outside;
+        }
+
+        div.ExternalNotification-Container ul li {
+            }
+
+div.ExternalNotification-Error {
+        border: 1px solid #DD3C10;
+
+}
+    div.ExternalNotification-Error h5 {
+         color: #E70101;
+    }
+
+div.ExternalNotification-Information {
+   border: solid 1px #cc9900;
+}
+
+    div.ExternalNotification-Information h5 {
+        color:#cc9900;
+    }
+
+div.ExternalNotification-Confirmation {
+     border: solid 1px #008000;
+}
+
+    div.ExternalNotification-Confirmation h5 {
+            color: #008000;
+    }
+
+
+
+
+
+
+/* External Form */
+
+span.field-validation-error {
+    color: #E70101;
+    display: block;
+    padding: 8px 0 0 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+input.input-validation-error {
+    border: solid 1px #E70101 !important;
+}
+
+div.ExternalForm-Title {
+	width:880px;
+	height:118px;
+	
+	text-align:center;
+	
+	background-image:url("../images/reg-title-bg.png");
+}
+
+    div.ExternalForm-Title h1{
+	    color:#FFFFFF;
+	    font-size:26px;
+	
+	    padding:12px 0 0 0;
+	
+	    letter-spacing:-1px;
+	
+	    text-shadow:0 -1px 0 #222222;
+    }
+
+div.ExternalForm-Container {
+    padding: 20px 50px;
+    width: 450px;
+    margin: 0 auto;
+}
+
+	div.ExternalForm-Container h1
+	{
+		font-size:22px;	
+		color:#666666;
+		padding:10px;
+	}
+	div.ExternalForm-Container h2
+	{
+		font-size:14px;	
+		color:#666666;
+        padding: 0 10px;
+        line-height: 19px;
+	}
+
+	div.ExternalForm-Container table
+	{
+		margin: 20px 0 30px 0;
+	}
+
+        div.ExternalForm-Container table tr td:first-child {
+            text-align: right;
+            vertical-align: top;
+        }
+
+                        div.ExternalForm-Container table tr td:first-child label {
+                    padding: 4px 0 0 0;
+                    display: block;
+                }
+
+	    div.ExternalForm-Container table input.Text,
+        div.ExternalForm-Container table select,
+        div.ExternalForm-Container table textarea
+	    {
+		    padding:5px;
+		    border:1px solid #C6C6C6;
+		    color:#666666;
+		    background-color:#F5F5F5;
+	    }
+
+	    div.ExternalForm-Container table input.Text
+        {
+		    width:185px;
+        }
+
+        div.ExternalForm-Container table textarea {
+            width: 230px;
+            height: 125px;
+        }
+
+	    div.ExternalForm-Container table tr td
+	    {
+		    padding:10px;	
+		    color:#666666;
+		    font-size:14px;
+		    font-weight:bold;
+		    letter-spacing:0;
+	    }
+
+            div.ExternalForm-Container table tr td span.Toggle {
+                font-size: 12px;
+                font-weight: bold;
+                padding: 2px 0 0 0;
+                margin: 0;
+                display: block;
+            }
+
+                div.ExternalForm-Container table tr td span.Toggle a {
+                    font-weight: normal;
+                }
+
+        div.ExternalForm-Container table tr td div.RadioButtonList
+        {
+            font-weight: normal;
+            line-height: 20px;
+            }
+
+	    div.ExternalForm-Container a.Button,
+        div.ExternalForm-Container span.Button,
+        div.ExternalForm-Container button span.Button
+	    {
+		    display:block;
+	
+		    margin:0 auto;
+	
+		    width:130px;
+		    height:35px;
+	
+		    font-size:17px;
+		    font-weight:normal;
+		
+		    padding:17px 0 0 17px;
+		    color:#FFFFFF;
+	
+		    background-image:url(https://static.perkspot.com/images//community/friends/reg-button.png);
+		    text-shadow:0 -1px 0 #222222;
+		    text-align:left;
+
+            cursor: pointer;
+	    }
+
+/* External Form */
+
+/* ##################### */
+/* #   Login	       # */
+/* ##################### */
+
+div.Login-Title
+{
+	width:880px;
+	height:118px;
+	
+	text-align:center;
+	
+	background-image:url("../images/reg-title-bg.png");
+}
+
+div.Login-Title h1
+{
+	color:#FFFFFF;
+	font-size:26px;
+	
+	padding:12px 0 0 0;
+	
+	letter-spacing:-1px;
+	
+	text-shadow:0 -1px 0 #222222;
+}
+
+div.Login-Content
+{
+	padding:20px 50px;
+}
+
+	div.Login-Content div.Left
+	{
+		float:left;
+		width:480px;	
+	}
+	
+	div.Login-Content h1
+	{
+		font-size:22px;	
+		color:#666666;
+		padding:10px;
+	}
+	div.Login-Content h2
+	{
+		font-size:14px;	
+		color:#666666;
+	}
+	
+	div.Login-Content div.Left table
+	{
+		
+	}
+
+	div.Login-Content div.Left table input.Text
+	{
+		padding:5px;
+		border:1px solid #C6C6C6;
+		width:185px;
+		color:#666666;
+		background-color:#F5F5F5;
+	}
+
+	div.Login-Content div.Left table tr td
+	{
+		padding:10px;	
+		color:#666666;
+		font-size:14px;
+		font-weight:bold;
+		letter-spacing:0;
+	}
+
+            div.Login-Content div.Left table tr td:first-child {
+            vertical-align: top;
+
+        }
+
+                div.Login-Content div.Left table tr td:first-child label {
+                    padding: 4px 0 0 0;
+                                display: block;
+                }
+	
+	div.Login-Content div.Left table a.ResetPassword
+	{
+		font-size:12px;
+		display:block;	
+	}
+	
+	div.Login-Content div.Right
+	{
+		float:left;
+		width:300px;	
+	}
+	
+	div.Login-Content div.Right div.SignUpContainer
+	{
+		padding:20px 0 0 0;	
+	}
+
+	div.Login-Content div.Right div.Disclaimer
+	{
+		font-size:12px;
+		padding:10px 0 0 0;	
+		text-align:center;
+	}
+	
+	div.Login-Content a.Button,
+    div.Login-Content span.Button,
+    div.Login-Content button span.Button
+	{
+		display:block;
+	
+		margin:0 auto;
+	
+		width:130px;
+		height:35px;
+	
+		font-size:17px;
+		font-weight:normal;
+		
+		padding:17px 0 0 17px;
+		color:#FFFFFF;
+	
+		background-image:url("../images/reg-button.png");
+		text-shadow:0 -1px 0 #222222;
+		text-align:left;
+
+        cursor: pointer;
+	}
+
+
+	div.Login-Content div.Footer
+	{
+		padding:20px 0 0 0;
+		text-align:center;
+		float:none;
+		clear:both;	
+	}
+	
+/* ##################### */
+/* #   Registration    # */
+/* ##################### */
+
+div.Registration-Title,
+div.Registration-Finished-Title
+{
+	width:880px;
+	height:118px;
+	text-align:center;
+	background-image:url(https://static.perkspot.com/images//community/friends/reg-title-bg.png);
+}
+
+	div.Registration-Title h1,
+	div.Registration-Finished-Title h1
+	{
+		color:#FFFFFF;
+		font-size:26px;
+		letter-spacing:-1px;
+		text-shadow:0 -1px 0 #222222;
+	}
+
+	div.Registration-Title h1
+	{
+		padding:12px 0 0 0;
+	}
+
+	div.Registration-Finished-Title h1
+	{
+		padding: 35px 0 0 0;
+	}
+
+	div.Registration-Title h2
+	{
+		color:#FFFFFF;
+		font-size:18px;
+		margin:0 auto;
+		width:400px;
+		letter-spacing:-1px;
+		padding:6px 0 0 0;
+		text-shadow:0 -1px 0 #222222;
+	}
+
+div.Registration-SignupContent
+{
+	letter-spacing:-1px;
+	padding:10px 30px 20px 30px;
+}
+
+div.Registration-SignupContent h1
+{
+	padding:0 0 20px 0;
+	
+	font-size:26px;
+	font-weight:bold;
+	color:#002B5C;
+	
+	text-align:center;
+}
+
+div.Registration-SignupContent a.Button
+{
+	display:block;
+	
+	margin:0 auto;
+	
+	width:130px;
+	height:35px;
+	
+	font-size:17px;
+	
+	padding:17px 0 0 17px;
+	color:#FFFFFF;
+	
+	background-image:url(https://static.perkspot.com/images//community/friends/reg-button.png);
+	text-shadow:0 -1px 0 #222222;
+}
+
+div.Registration-SignupContent div.Footer
+{
+	clear:both;
+	float:none;	
+}
+
+/* Signup Page 1 */
+
+div.Registration-SignupContent div.Signup1Container div.Left
+{
+	float:left;
+	display:inline;
+	
+	width:477px;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields
+{
+	padding:0 0 15px 0;	
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields h2
+{
+	color:#666666;
+	font-size:16px;
+	font-weight:bold;
+	padding:0 0 5px 0;	
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table
+{
+	border-collapse:collapse;
+	border:1px solid #C6C6C6;
+	background-color:#E5E5E5;
+	width: 455px;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table input
+{
+	padding:5px;
+	border:1px solid #C6C6C6;
+	background-color:#FFFFFF;
+	width:185px;
+	color:#666666;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table select
+{
+	border: solid 1px #c6c6c6;
+	padding: 4px 4px 4px 2px;
+	color: #666;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table tr td
+{
+	padding:20px;	
+	color:#666666;
+	font-size:12px;
+	font-weight:bold;
+	letter-spacing:0;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table tr td div.Gender 
+{
+	padding:5px;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table tr td div.Gender input
+{
+	display:inline;	
+	float:left;
+	
+	background-color:Transparent;
+	border:none;
+	padding:0;
+	
+	width:auto;
+	margin:1px 5px 0 0;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table tr td div.Gender span
+{
+	display:inline;	
+	float:left;
+	
+	width:auto;
+	margin:0 20px 0 0;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Left div.Fields table span.Link
+{
+	font-size:10px;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Right
+{
+	float:left;
+	display:inline;
+	
+	width:343px;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Right h3
+{
+	font-size:14px;
+	font-weight:bold;
+	color:#002B5C;
+	padding:0 0 20px 0;
+}
+
+div.Registration-SignupContent div.Signup1Container div.Right div.Merchants
+{
+	width:343px;
+	height:314px;
+	background-image:url(https://static.perkspot.com/images//registration/merchants-products.jpg);
+}
+
+
+
+/* Signup Page 2 */
+
+
+div.Registration-SignupContent div.Signup2Container div.Left
+{
+	float:left;
+	display:inline;
+	
+	width:505px;
+}
+
+	div.Registration-SignupContent div.Signup2Container div.Left h1
+	{
+		color:#666666;
+		font-size:24px;
+		text-align:left;
+		font-weight:normal;
+		padding:24px 0 60px 0;
+	}
+
+	div.Registration-SignupContent div.Signup2Container div.Left h2
+	{
+		color:#666666;
+		font-size:22px;
+		font-weight:bold;
+		padding:0 0 25px 0;
+	}
+	
+	div.Registration-SignupContent div.Signup2Container div.Left table.Fields
+	{
+		margin:0 0 40px 0;
+	}
+	
+		div.Registration-SignupContent div.Signup2Container div.Left table.Fields tr td
+		{
+			color:#666666;
+			font-size:16px;
+			padding:0 0 15px 20px;
+			letter-spacing:0;
+		}
+		
+			div.Registration-SignupContent div.Signup2Container div.Left table.Fields tr td input.Text
+			{
+				padding:5px;
+				border:1px solid #C6C6C6;
+				background-color:#EDEDED;
+				width:185px;
+				color:#666666;
+			}
+
+div.Registration-SignupContent div.Signup2Container div.Right
+{
+	float:left;
+	display:inline;
+	
+	padding:0 0 0 15px;
+	width:300px;
+}
+
+	div.Registration-SignupContent div.Signup2Container div.Right h3
+	{
+		padding:0 0 0 14px;
+		font-size:12px;
+		color:#666666;
+	}
+
+	div.Registration-SignupContent div.Signup2Container div.Right a.ExampleEmail
+	{
+		margin:10px 0 0 15px;
+		display:block;
+		width:251px;
+		height:487px;
+		background-image:url(https://static.perkspot.com/images//registration/marketing-email-thumb.jpg);
+	}
+
+
+
+/* Signup Page 3 */
+
+
+div.Registration-SignupContent div.Signup3Container div.Left
+{
+	float:left;
+	display:inline;
+	
+	width:446px;
+}
+
+	div.Registration-SignupContent div.Signup3Container div.Left h1
+	{
+		color:#666666;
+		font-size:24px;
+		text-align:left;
+		font-weight:normal;
+		padding:28px 0 60px 0;
+	}
+	
+	div.Registration-SignupContent div.Signup3Container div.Left h1 span
+	{
+		color:#4876DE
+	}
+
+	div.Registration-SignupContent div.Signup3Container div.Left h2
+	{
+		color:#666666;
+		font-size:20px;
+		font-weight:bold;
+		padding:0 0 25px 0;
+	}
+	
+	div.Registration-SignupContent div.Signup3Container div.Left table.Fields
+	{
+		margin:0 0 40px 0;
+	}
+	
+		div.Registration-SignupContent div.Signup3Container div.Left table.Fields tr td
+		{
+			color:#666666;
+			font-size:16px;
+			padding:0 0 15px 20px;
+			letter-spacing:0;
+		}
+		
+			div.Registration-SignupContent div.Signup3Container div.Left table.Fields tr td input.Text
+			{
+				padding:5px;
+				border:1px solid #C6C6C6;
+				background-color:#EDEDED;
+				width:185px;
+				color:#666666;
+			}
+
+div.Registration-SignupContent div.Signup3Container div.Right
+{
+	float:left;
+	display:inline;
+	
+	padding:0 0 0 15px;
+	width:359px;
+}
+
+	div.Registration-SignupContent div.Signup3Container div.Right div.PastDeals
+	{
+		font-size:11px;
+		color:#666666;
+		text-decoration:none;
+		letter-spacing:0;
+		
+		display:block;
+		
+		padding:11px 0 0 20px;
+		
+		width:339px;
+		height:500px;
+		background-image:url(https://static.perkspot.com/images//registration/crowdclick-deals.jpg);
+	}
+
+
+div.Registration-SignupContent div.Finished
+{
+	padding:40px;
+}
+
+div.Registration-SignupContent div.Finished h1
+{
+	font-size:30px;
+	color:#666666;
+}
+
+div.Registration-SignupContent div.Finished p
+{
+	text-align:center;
+	font-size:20px;
+	color:#666666;
+}
+
+div.Registration-SignupContent div.Finished p a
+{
+	text-decoration:underline;	
+}
+
+	div.Registration-ModalBackground
+    {
+		position:fixed; 
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		height:100%;
+		width:100%;
+		z-index:21;
+		display: none;
+
+		_position: absolute;
+		-overflow-y: hidden;
+    	
+		background-image:url(https://static.perkspot.com/images//layout/background-modal.png);
+		background-repeat:repeat;
+		
+		#background-image: none;
+        #filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='/images/layout/background-modal.png');
+        #position: absolute;
+		#height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+		#width: expression(document.body.scrollWidth > document.body.offsetWidth ? document.body.scrollWidth : document.body.offsetWidth + 'px');
+    }
+    
+    div.Registration-Modal
+    {
+    	display: none;
+		position: fixed;
+		_position: absolute;
+		top: 370px;
+		z-index: 25;
+		
+		margin:0 auto;
+		
+		padding:20px;
+		
+		background-color:#FFFFFF;
+		border: solid 3px #ccc;
+		background-repeat:repeat;
+		
+	}
+
+	div.ErrorContainer
+	{
+
+		
+	}
+	
+	div.ErrorContainer ul
+	{
+		float:left;
+		display:none;
+		padding:10px;
+		margin:0 0 20px 0;
+		border:1px solid #DE3D41;
+		background-color:#F5D3D5;
+	}
+	
+	div.ErrorContainer ul li
+	{
+		padding:2px;
+		list-style:disc none outside;
+		margin:0 0 0 15px;
+	}
+	
+/* Verify User */
+/* ------------------------------------------------- */
+
+div.VerifyUser-Title
+{
+	text-align:center;
+	background-image:url(https://static.perkspot.com/images//community/friends/reg-title-bg.png);
+	color: #fff;
+	padding: 0 0 11px 0;
+}
+
+	div.VerifyUser-Title table
+	{
+		width: 880px;
+		height: 107px;
+	}
+	
+		div.VerifyUser-Title table tr
+		{
+		}
+		
+			div.VerifyUser-Title table tr td
+			{
+				vertical-align: middle;
+			}
+				
+				div.VerifyUser-Title table tr td h1
+				{
+					font-size: 26px;
+					margin: 0 0 6px 0;
+				}
+	
+				div.VerifyUser-Title table tr td p
+				{
+					font-size: 18px;
+				}
+	
+div.VerifyUser-Body
+{
+	padding: 20px 30px 30px 30px;
+	width: 820px;
+}
+
+	div.VerifyUser-Body p
+	{
+		color: #666;
+		font-size: 13px;
+		margin: 0 0 10px 0;
+		text-align: center;
+	}
+	
+	div.VerifyUser-Body p.Footer
+	{
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+
+	div.VerifyUser-Body table
+	{
+		width: 818px;
+		color: #666;
+		font-weight: bold;
+	}
+	
+		div.VerifyUser-Body table tr
+		{
+		}
+		
+			div.VerifyUser-Body table tr td
+			{
+				padding: 15px 0 0 0;
+			}
+			
+			div.VerifyUser-Body table tr td:first-child,
+			div.VerifyUser-Body table tr td.first-child
+			{
+				text-align: right;
+				padding-right: 20px;
+				font-size: 14px;
+			}
+			
+				div.VerifyUser-Body table tr td input
+				{
+					color: #666;
+					background-color: #f5f5f5;
+					border: solid 1px #c6c6c6;
+					padding: 5px;
+					width: 180px;
+				}
+				
+				div.VerifyUser-Body table tr td a.Button
+				{
+					background-image: url(https://static.perkspot.com/images//community/friends/reg-button.png);
+					color: #fff;
+					display: block;
+					font-size: 17px;
+					font-weight: normal;
+					height: 35px;
+					padding: 17px 40px 0 17px;
+					text-align: center;
+					width: 90px;
+					margin: 0 0 0 -7px;
+				}
+				
+div.External-NotificationMessage
+{
+	background-color: #F5D3D5;
+	border: 1px solid #DE3D41;
+	margin: 0 0 20px;
+	padding: 10px;
+	color: #333;
+}
+
+	div.External-NotificationMessage h4
+	{
+	}
+
+	div.External-NotificationMessage ul
+	{
+	}
+		
+		div.External-NotificationMessage ul li
+		{
+			list-style:disc outside none;
+			margin:0 0 0 15px;
+			padding:2px;
+		}
+		
+/* Referral Program Style */
+/* ------------------------------------------------- */
+
+div.CreateReferrals-BannerContainer
+{
+	margin: 20px 20px 0 20px;
+	width: 608px;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//community/friends/bg-sprite.png);
+	background-position: right top;
+	background-repeat: repeat-y;
+	padding: 16px 16px 0 16px;
+	display: inline;
+}
+
+	div.CreateReferrals-BannerContainer img
+	{
+		width: 608px;
+	}
+
+div.Referrals-ContentHeader
+{
+	width: 640px;
+	margin: 20px 20px 0 20px;
+	float: left;
+	display: inline;
+	background-image: url(https://static.perkspot.com/images//community/friends/bg-sprite.png);
+	background-position: right top;
+	background-repeat: repeat-y;
+}
+
+	div.Referrals-ContentHeader h1
+	{
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		padding: 16px;
+		height: 25px;
+		background-image: url(https://static.perkspot.com/images//layout/Referrals-ContentHeader-Border.png);
+		background-position: left bottom;
+		background-repeat: repeat-x;
+		
+		#background: none;
+		#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='/Images/layout/Referrals-ContentHeader-Border.png');
+	}
+
+div.Referrals-ContentContainer
+{
+	width: 608px;
+	margin: 0 20px 0 20px;
+	padding: 0 16px 16px 16px;
+	background-image: url(https://static.perkspot.com/images//community/friends/bg-sprite.png);
+	background-position: right top;
+	background-repeat: repeat-y;
+	float: left;
+	display: inline;
+}
+
+	div.ReferralsList-ConfirmationPanel
+	{
+		min-height: 156px;
+		height: auto !important;
+		height: 156px;
+		width: 416px;
+		float: left;
+		position: relative;
+		padding: 0 0 0 192px;
+	}
+	
+		div.ReferralsList-ConfirmationPanel div.BackgroundImage
+		{
+			height: 156px;
+			width: 608px;
+			position: absolute;
+			top: -1px;
+			left: 0;
+			float: left;
+			background-image: url(https://static.perkspot.com/images//layout/Referrals-ConfirmationPanelBackground.png);
+			background-repeat: no-repeat;
+			background-position: left top;
+			
+			#background: none;
+			#filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='/Images/layout/Referrals-ConfirmationPanelBackground.png');
+		}
+	
+		div.ReferralsList-ConfirmationPanel h2
+		{
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+			margin: 20px 0 0 25px;
+		}
+		
+		div.ReferralsList-ConfirmationPanel p
+		{
+			margin: 5px 25px 0 25px;
+			font-size: 13px;
+			line-height: 17px;
+			color: #fff;
+		}
+		
+		div.ReferralsList-ConfirmationPanel a.GlobalRightArrowButton
+		{
+			margin-top: 14px;
+			margin-left: 25px;
+		}
+
+	div.Referrals-ContentHelper
+	{
+		margin: 16px 0 0 0;
+		border: solid 2px #002B5C;
+		float: left;
+		width: 604px;
+		background-color: #fff;
+		display: inline;
+	}
+		
+		div.CreateReferrals-Header
+		{
+			width: 604px;
+			height: 60px;
+			background-image: url(https://static.perkspot.com/images//layout/Referrals-HeaderBackground.gif);
+			background-position: left bottom;
+			background-repeat: repeat-x;
+			float: left;
+			display: inline;
+		}
+		
+			div.CreateReferrals-Header-Counter
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-Header-SmallCounterBackground.gif);
+				background-position: left top;
+				background-repeat: no-repeat;
+				position: relative;
+				width: 54px;
+				height: 45px;
+				text-align: center;
+				float: left;
+				margin: 8px 0 7px 8px;
+				display: inline;
+			}
+			
+				div.CreateReferrals-Header-Counter span
+				{
+					line-height: 1;
+				}
+				
+				div.CreateReferrals-Header-Counter span.Value
+				{
+					font-size: 24px;
+					color: #fff;
+					font-weight: bold;
+					padding: 4px 0 0 0;
+					display: block;
+					
+					#padding-top: 5px;
+				}
+				
+				div.CreateReferrals-Header-Counter span.Label
+				{
+					font-size: 10px;
+					color: #d5d5d5;
+					text-transform: uppercase;
+				}
+				
+				div.CreateReferrals-Header-Counter div.Seperator
+				{
+					width: 54px;
+					height: 22px;
+					z-index: 99;
+					position: absolute;
+					top: 0;
+					left: 0;
+					border-bottom: solid 1px #212e37;
+				}
+		
+			div.CreateReferrals-Header ul
+			{
+				margin-top: 28px;
+				margin-left: 25px;
+				display: inline;
+			}
+			
+				div.CreateReferrals-Header ul li
+				{
+				}
+				
+					div.CreateReferrals-Header ul li a
+					{
+					}
+					
+				div.CreateReferrals-Header ul li.Selected
+				{
+				}
+				
+					div.CreateReferrals-Header ul li.Selected a
+					{
+					}
+					
+			div.CreateReferrals-Header a.MyReferralsLink
+			{
+				color: #fff;
+				float: right;
+				display: block;
+				font-weight: bold;
+				padding: 21px 20px 21px 20px;
+				text-shadow: 0px -1px 0px #000;
+			}
+					
+		div.ReferralsList-Header
+		{
+			width: 604px;
+			background-image: url(https://static.perkspot.com/images//layout/Referrals-HeaderBackground.gif);
+			background-position: left bottom;
+			background-repeat: repeat-x;
+			float: left;
+			display: inline;
+		}
+		
+			div.ReferralsList-Header-Counter
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-Header-LargeCounterBackground.gif);
+				background-position: left top;
+				background-repeat: no-repeat;
+				width: 181px;
+				height: 88px;
+				float: left;
+				position: relative;
+				display: inline;
+				margin: 15px 0 0 15px;
+			}
+			
+				div.ReferralsList-Header-Counter span
+				{
+					line-height: 1;
+				}
+				
+				div.ReferralsList-Header-Counter span.Label
+				{
+					font-size: 11px;
+					color: #d5d5d5;
+					text-transform: uppercase;
+					font-weight: bold;
+					padding: 12px 0 0 12px;
+					float: left;
+				}
+				
+				div.ReferralsList-Header-Counter span.Value
+				{
+					font-size: 64px;
+					color: #fff;
+					font-weight: bold;
+					text-shadow: 0px -1px 0px #161b1e;
+					float: right;
+					padding: 12px 14px 0 0;
+				}
+				
+				div.ReferralsList-Header-Counter div.Seperator
+				{
+					width: 181px;
+					height: 43px;
+					z-index: 99;
+					position: absolute;
+					top: 0;
+					left: 0;
+					border-bottom: solid 1px #212e37;
+				}
+		
+			div.ReferralsList-Header ul
+			{
+				margin-top: 30px;
+				float: left;
+				display: inline;
+			}
+			
+				div.ReferralsList-Header ul li
+				{
+				}
+				
+					div.ReferralsList-Header ul li a
+					{
+					}
+					
+				div.ReferralsList-Header ul li.Selected
+				{
+				}
+				
+					div.ReferralsList-Header ul li.Selected a
+					{
+					}
+		
+		div.CreateReferrals-Body
+		{
+			width: 604px;
+		}
+		
+			div.CreateReferrals-Body-Section
+			{
+				border-bottom: solid 1px #dbdbdb;
+				border-top: solid 1px #fff;
+				width: 564px;
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-Body-Background.gif);
+				background-repeat: repeat-x;
+				background-position: left top;
+				padding: 20px;
+				float: left;
+			}
+			
+			div.CreateReferrals-Body-Section span.Label
+			{
+				font-size: 12px;
+				font-weight: bold;
+				color: #383838;
+				display: block;
+				float: left;
+				margin: 0 0 7px 0;
+				width: 564px;
+			}
+			
+				div.CreateReferrals-Body-Section span.Label i
+				{
+					font-weight: normal;
+				}
+			
+			div.CreateReferrals-Body-Section div.Referrals-TextInputContainer
+			{
+				margin-bottom: 15px;
+			}
+			
+			div.CreateReferrals-Body-Section a.GlobalButton
+			{
+				clear: both;
+				width: 132px;
+			}
+			
+			div.CreateReferrals-Body-Section h4
+			{
+				font-size: 18px;
+				font-weight: bold;
+				color: #333;
+				line-height: 1;
+				margin: 0 0 4px 0;
+			}
+			
+			div.CreateReferrals-Body-Section p
+			{
+				color: #333;
+				font-size: 13px;
+			}
+		
+		div.ReferralsList-Body
+		{
+			background-color: #FAF9F9;
+			float: left;
+		}
+		
+			div.ReferralsList-ReferralItem
+			{
+				padding: 12px 0 12px 0;
+				border-bottom: solid 1px #dbdbdb;
+				border-top: solid 1px #fff;
+				float: left;
+				width: 604px;
+			}
+			
+				div.ReferralList-ReferralItem span
+				{
+					display: inline-block;
+				}
+			
+				div.ReferralsList-ReferralItem span.Title
+				{
+					color: #383838;
+					font-weight: bold;
+					font-size: 13px;
+					padding: 0 0 0 37px;
+					float: left;
+				}
+				
+				div.ReferralsList-ReferralItem span.EnteredOn
+				{
+					float: left;
+					padding: 2px 0 0 37px;
+					font-size: 12px;
+					color: #6c6c6c;
+					clear: both;
+				}
+				
+				div.ReferralsList-ReferralItem span.SentOn
+				{
+					float: right;
+					color: #6c6c6c;
+					padding: 0 20px 0 0;
+					font-size: 12px;
+				}
+				
+			div.ReferralsList-ReferralItem-Last
+			{
+				border-top: none !important;
+			}
+			
+			div.ReferralsList-ReferralItem-Registered
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-RespondedIcon.gif);
+				background-position: 15px center;
+				background-repeat: no-repeat;
+			}
+			
+			span.Empty
+			{
+				padding: 30px 0 30px 0;
+				text-align: center;
+				float: left;
+				width: 604px;
+				border-bottom: 1px solid #DBDBDB;
+			}
+			
+		div.Referrals-HowItWorksContainer
+		{
+			background-image: url(https://static.perkspot.com/images//layout/Referrals-Body-Background.gif);
+			background-position: left bottom;
+			background-repeat: repeat-x;
+			padding: 20px;
+			float: left;
+			color: #333333;
+			background-color: #F3F3F3;
+			border-bottom: 1px solid #DBDBDB;
+		}
+		
+			div.Referrals-HowItWorksContainer h4
+			{
+				font-size: 18px;
+				font-weight: bold;
+			}
+			
+			div.Referrals-HowItWorksContainer p
+			{
+				margin: 19px 0 0 0;
+				line-height: 18px;
+			}
+			
+			div.Referrals-HowItWorksContainer ul
+			{
+				margin: 19px 0 0 25px;
+				list-style-type: disc;
+				list-style-position: outside;
+			}
+			
+				div.Referrals-HowItWorksContainer ul li
+				{
+					margin: 2px 0 0 0;
+				}
+		
+		div.ReferralsList-Footer
+		{
+			background-image: url(https://static.perkspot.com/images//layout/Referrals-FooterBackground.gif);
+			background-position: left top;
+			background-repeat: repeat-x;
+			height: 39px;
+			width: 604px;
+			float: left;
+		}
+		
+			div.ReferralsList-Footer a,
+			div.ReferralsList-Footer span
+			{
+				display: inline-block;
+				float: right;
+				background-position: left top;
+				background-repeat: no-repeat;
+				height: 22px;
+				margin: 8px 0 0 0;
+			}
+		
+			div.ReferralsList-Footer a
+			{
+				
+			}
+			
+			div.ReferralsList-Footer span
+			{
+			}
+			
+			div.ReferralsList-Footer a.Prev,
+			div.ReferralsList-Footer span.Prev
+			{
+				width: 27px;
+			}
+			
+			div.ReferralsList-Footer a.Prev
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-LinearNavigation-Prev.gif);
+			}
+			
+			div.ReferralsList-Footer span.Prev
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-LinearNavigation-PrevInactive.gif);
+			}
+			
+			div.ReferralsList-Footer a.Next,
+			div.ReferralsList-Footer span.Next
+			{
+				width: 27px;
+				margin-right: 19px;
+			}
+			
+			div.ReferralsList-Footer a.Next
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-LinearNavigation-Next.gif);
+			}
+			
+			div.ReferralsList-Footer span.Next
+			{
+				background-image: url(https://static.perkspot.com/images//layout/Referrals-LinearNavigation-NextInactive.gif);
+			}
+					
+div.Referrals-ContentFooter
+{
+	width: 640px;
+	height: 20px;
+	float: left;
+}
+			
+div.CreateReferrals-PromotionReferral-Item
+{
+
+
+}
+
+	div.CreateReferrals-PromotionReferral-Item a.AddReferral
+	{
+		width: 24px;
+		padding: 6px 17px 7px 17px;
+		display: block;
+		float: left;
+		font-weight: bold;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #cecece;
+		cursor: default;
+		background-image: url(https://static.perkspot.com/images//layout/Referrals-AddIcon.gif);
+		background-repeat: no-repeat;
+		background-position: right 9px;
+		
+		#padding-left: 13px;
+		margin: 0 -1px 0 0;
+	}
+	
+	div.CreateReferrals-PromotionReferral-Item a.Active
+	{
+		color: #737373 !important;
+		cursor: pointer !important;
+		background-image: url(https://static.perkspot.com/images//layout/Referrals-AddIcon-Active.gif) !important;
+	}
+
+ul.Referrals-TabNavigation
+{
+	float: left;
+	margin: 0 0 0 15px;
+	height: 33px;
+}
+
+	ul.Referrals-TabNavigation li,
+	ul.Referrals-TabNavigation li a
+	{
+		background-image: url(https://static.perkspot.com/images//layout/Referrals-TabBackground.gif);
+		background-repeat: no-repeat;
+		font-weight: bold;
+		font-size: 13px;
+	}
+	
+	ul.Referrals-TabNavigation li
+	{
+		background-position: left top;
+		float: left;
+		cursor: pointer;
+		margin: 0 5px 0 0;
+	}
+	
+		ul.Referrals-TabNavigation li a
+		{
+			background-position: right top;
+			color: #fff;
+			padding: 8px 20px 8px 16px;
+			margin: 0 0 0 4px;
+			float: left;
+			text-shadow: 0px -1px 0px #222;
+		}
+		
+		ul.Referrals-TabNavigation li a:active
+		{
+			outline: 0;
+		}
+
+	ul.Referrals-TabNavigation li.Selected,
+	ul.Referrals-TabNavigation li.Selected a
+	{
+		background-image: url(https://static.perkspot.com/images//layout/Referrals-TabBackground-Selected.gif);
+	}
+	
+	ul.Referrals-TabNavigation li.Selected
+	{
+	}
+	
+		ul.Referrals-TabNavigation li.Selected a
+		{
+			color: #383838;
+			padding-bottom: 9px;
+			text-shadow: none;
+		}
+
+div.Referrals-TextInputContainer
+{
+	position: relative;
+	float: left;
+	background-image: url(https://static.perkspot.com/images//layout/Referrals-TextInputBackground.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	border-bottom: solid 1px #dadada;
+}
+
+	div.Referrals-TextInputContainer div.InnerContainer,
+	div.Referrals-TextInputContainer div.BottomLeft,
+	div.Referrals-TextInputContainer div.BottomRight
+	{
+		background-image: url(https://static.perkspot.com/images//layout/Referrals-TextInputBackground.gif);
+		background-repeat: no-repeat;
+		float: left;
+	}
+	
+	div.Referrals-TextInputContainer div.BottomLeft,
+	div.Referrals-TextInputContainer div.BottomRight
+	{
+		position: absolute;
+		bottom: -1px;
+		height: 4px;
+		width: 4px;
+		
+		#bottom: -2px;
+	}
+	
+	div.Referrals-TextInputContainer div.InnerContainer
+	{
+		padding: 3px 3px 2px 0;
+		margin: 0 0 0 3px;
+		background-position: right top;
+	}
+	
+	div.Referrals-TextInputContainer div.BottomLeft
+	{
+		left: 0;
+		background-position: left bottom;
+	}
+	
+	div.Referrals-TextInputContainer div.BottomRight
+	{
+		right: 0;
+		background-position: right bottom;
+	}
+	
+		div.Referrals-TextInputContainer label
+		{
+			position: absolute;
+			color: #999999;
+			top: 7px;
+			left: 8px;
+			cursor: text;
+		}
+		
+		div.Referrals-TextInputContainer label.Selected
+		{
+			color: #ccc;
+		}
+	
+		div.Referrals-TextInputContainer input,
+		div.Referrals-TextInputContainer textarea
+		{
+			font-family: Arial;
+			font-size: 13px;
+			color: #101010;
+		}
+	
+		div.Referrals-TextInputContainer input
+		{
+			border: 0;
+			padding: 4px;
+		}
+		
+		div.Referrals-TextInputContainer textarea
+		{
+			border: 0;
+			padding: 4px;
+		}
+		
+		div.Referrals-TextInputContainer select
+		{
+			margin: 0 3px 0 0;
+			border: 0;
+		}
+
+span.Referrals-ValidationMessage
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #cc0712;
+	display: block;
+	float: left;
+	margin: 0 0 7px 0;
+	width: 564px;
+}
+
+.msg-error {
+	/**padding: 10px 60px;**/
+	font-size: 12px;
+	padding-top:10px;
+	color: red;
+	font-weight: normal;
+	text-align: left;
+}

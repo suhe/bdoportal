@@ -1,0 +1,43 @@
+/** Custom CSS **/
+.form-horizontal .control-label{
+	text-align:left;	
+}
+.margin-bottom-10 {
+	margin-bottom:10px;
+}
+table thead > tr > th.column-id {
+	width:10%; 
+}
+
+table thead > tr > th.column-active {
+	text-align: center;
+}
+
+table thead > tr > th.column-authorize {
+	text-align: center;
+}
+
+table tbody > tr > th.column-information {
+	text-align: center;
+}
+
+table tbody > tr > td.column-information {
+	text-align: center;
+}
+
+/** Loading Bar **/
+.loader {
+	position: fixed;
+	left: 0px;
+	display: none;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../img/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+.progress {
+    margin-top: : 10px;
+    background: #CCC;
+}

@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright 2015, Suhendar
+ *
+ * \App\Request\RoleRequest.php
+ * Licensed under The MIT License
+ * Author : Suhendar
+ * Email : hendarsyahss@gmail.com
+ * Redistributions of files Bdo Portalz
+ *
+ * @copyright Copyright 2015, Portalz 
+ * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
+ */
+
+namespace App\Http\Requests;
+use App\Http\Requests\Request;
+
+class ChangePasswordRequest extends Request
+{
+	/**
+	 * Determine if the user is authorized to make this request.
+	 *
+	 * @return bool
+	 */
+	public function authorize()
+	{
+		return true;
+	}
+    /**
+     * Get the validation rules that apply to the request.
+     * Error -- unique:companies,name,$id,id --
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+			'password' => "required",
+			'repeat_password' => 'required|same:password'
+        ];
+    }
+	
+	/**
+	* Get the error messages for the defined validation rules.
+	*
+	* @return array
+	*/
+	
+}
+
+ 

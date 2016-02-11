@@ -1,0 +1,27 @@
+[27-Feb-2014 10:44:53 UTC] PHP Fatal error:  Function name must be a string in /home/krestoni/public_html/timereport/modules/job_desc/views/user/index.php on line 245
+[03-Mar-2014 06:14:56 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 09:26:27 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:00:41 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:02:44 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:03:24 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:03:42 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:04:13 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:19:44 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:20:20 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:20:37 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:20:47 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[03-Mar-2014 10:21:02 UTC] PHP Fatal error:  Call to undefined function digitTwo() in /home/krestoni/public_html/timereport/modules/time_report/views/user/view2.php on line 121
+[04-Mar-2014 10:13:58 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[04-Mar-2014 10:41:56 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[04-Mar-2014 10:44:59 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[04-Mar-2014 10:49:43 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[04-Mar-2014 10:52:28 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[04-Mar-2014 10:53:00 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[05-Mar-2014 02:53:54 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[05-Mar-2014 02:54:02 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[05-Mar-2014 02:55:28 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[05-Mar-2014 02:58:30 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[05-Mar-2014 03:04:46 UTC] PHP Fatal error:  Cannot use object of type CI_DB_mysql_result as array in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 392
+[05-Mar-2014 03:55:23 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/krestoni/public_html/timereport/modules/time_report/views/manager/timestaff.php on line 90
+[05-Mar-2014 04:29:16 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 99
+[05-Mar-2014 04:29:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/krestoni/public_html/timereport/modules/time_report/models/josh_time_report.php on line 99
