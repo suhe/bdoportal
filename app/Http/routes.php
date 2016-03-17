@@ -46,6 +46,11 @@ Route::group(['prefix' => 'management','middleware' => 'auth'], function() {
 	Route::post('/file/store', ['uses'=>'FileController@onStore','middleware' => 'administrator']);
 	Route::post('/file/delete', ['uses'=>'FileController@onDelete','middleware' => 'administrator']);
 	Route::get('/file/company', ['uses'=>'FileController@onCompanyList','middleware' => 'administrator']);
+	Route::get('/information', ['uses'=>'FileController@onInformation','middleware' => 'administrator']);
+	Route::get('/information/form', ['uses'=>'FileController@onInformationForm','middleware' => 'administrator']);
+	Route::get('/information/form/{id}', ['uses'=>'FileController@onInformationForm','middleware' => 'administrator']);
+	Route::post('/information/store', ['uses'=>'FileController@onInformationStore','middleware' => 'administrator']);
+	Route::post('/information/delete', ['uses'=>'FileController@onInformationDelete','middleware' => 'administrator']);
 });
 Route::group(['prefix' => 'setting','middleware' => 'auth'], function() {
 	Route::get('/change-password', ['uses'=>'UserController@onPageChangePassword']);
@@ -55,11 +60,13 @@ Route::group(['prefix' => 'setting','middleware' => 'auth'], function() {
 
 Route::group(['prefix' => 'user','middleware' => 'auth'], function() {
 	Route::get('/information', ['uses'=>'UserController@onPageUserInformation','middleware' => 'superuser']);
+	
 });
 
 
 Route::group(['prefix' => 'file','middleware' => 'auth'], function() {
 	Route::get('/download', ['uses'=>'FileController@onPageDownload']);
 	Route::get('/download/{id}', ['uses'=>'FileController@onDownload']);
+	Route::get('/information/download/{id}', ['uses'=>'FileController@onInformationDownload']);
 });
 

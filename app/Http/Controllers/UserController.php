@@ -308,8 +308,53 @@ class UserController extends Controller {
 	{
 		Meta::title(Lang::get('meta.user'));
 		Meta::meta('description', Lang::get('meta.user information'));
+		
+		/** File Information Download **/
+		$query = \App\Models\Information::leftJoin('users', 'users.id', '=' ,'informations.created_by')
+		->select('informations.*')
+		->addSelect("users.first_name as upload_name")
+		->where('informations.active', '=', '1');
+		$grid = new Grid(
+			(new GridConfig)
+			->setDataProvider(
+				new EloquentDataProvider (
+					$query
+				)
+			)
+			->setName('grid')
+			->setPageSize(15)
+			->setColumns([
+				(new FieldConfig)
+				->setName('name')
+				->setLabel(Lang::get('label.name'))
+				->setSortable(false)
+				->setCallback(function ($val) {
+					return '<a href="'.url('file/information/download/'.$val).'">'.$val.'</a>';
+				})
+				,
+				(new FieldConfig)
+				->setName('description')
+				->setLabel(Lang::get('label.description'))
+				->setSortable(true)
+				,
+							
+				(new FieldConfig)
+				->setName('upload_name')
+				->setLabel(Lang::get('label.upload by'))
+				->setSortable(true)
+				,
+				(new FieldConfig)
+				->setName('upload_at')
+				->setLabel(Lang::get('label.upload at'))
+				->setSortable(true)
+				,				
+			])
+		);
+		/** End File Information Download **/
+		
 		return Theme::view('users.pages.information',[
-			'data' => Auth::user()
+			'data' => Auth::user(),
+			'grid' => $grid	
 		]);	
 	}
 	

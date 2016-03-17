@@ -181,7 +181,7 @@
 					<li class="{!! Request::segment(2) == 'download' ? 'active' : '' !!}">
 						<a href="{!! url('file/download') !!}">
 							<i class="menu-icon fa fa-download"></i>
-							<span class="menu-text"> {!! Lang::get("menu.downloads") !!} </span>
+							<span class="menu-text"> {!! Lang::get("menu.downloads") !!}</span>
 						</a>
 
 						<b class="arrow"></b>
@@ -197,7 +197,7 @@
 							<b class="arrow"></b>
 						</li>	
 					@else	
-						<li class="{!! Request::segment(2) == 'information' ? 'active' : '' !!}">
+						<li class="{!!  Request::segment(1) == 'user' &&  Request::segment(2) == 'information' ? 'active' : '' !!}">
 							<a href="{!! url('user/information') !!}">
 								<i class="menu-icon fa fa-info"></i>
 								<span class="menu-text"> {!! Lang::get("menu.information") !!} </span>
@@ -220,6 +220,14 @@
 								<a href="{!! url('management/file') !!}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									{!! Lang::get("menu.file management") !!}
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							<li class="{!! Request::segment(1) == 'management' && Request::segment(2) == 'information' ? 'active' : '' !!}">
+								<a href="{!! url('management/information') !!}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									{!! Lang::get("menu.information") !!}
 								</a>
 
 								<b class="arrow"></b>

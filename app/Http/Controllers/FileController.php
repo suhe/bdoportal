@@ -17,19 +17,19 @@ use Caffeinated\Themes\Facades\Theme;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Lang;
-use Nayjest\Grids\Components\FiltersRow;
-use Nayjest\Grids\Components\Footer;
-use Nayjest\Grids\Components\Header;
-use Nayjest\Grids\Components\Pager;
-use Nayjest\Grids\Components\RenderFunc;
-use Nayjest\Grids\DataProvider;
+//use Nayjest\Grids\Components\FiltersRow;
+//use Nayjest\Grids\Components\Footer;
+//use Nayjest\Grids\Components\Header;
+//use Nayjest\Grids\Components\Pager;
+//use Nayjest\Grids\Components\RenderFunc;
+//use Nayjest\Grids\DataProvider;
 use Nayjest\Grids\EloquentDataProvider;
-use Nayjest\Grids\EloquentDataRow;
+//use Nayjest\Grids\EloquentDataRow;
 use Nayjest\Grids\FieldConfig;
-use Nayjest\Grids\FilterConfig;
+//use Nayjest\Grids\FilterConfig;
 use Nayjest\Grids\Grid;
 use Nayjest\Grids\GridConfig;
-use Nayjest\Grids\IdFieldConfig;
+//use Nayjest\Grids\IdFieldConfig;
 use Eusonlito\LaravelMeta\Facade as Meta;
 use Auth;
 use Breadcrumbs;
@@ -65,6 +65,21 @@ class FileController extends Controller {
 		{
 			$breadcrumbs->parent('home');
 			$breadcrumbs->push(Lang::get('menu.downloads'), url('file/download'), ['icon' => 'ace-icon fa fa-download']);
+		});
+		
+		Breadcrumbs::register('information-management', function($breadcrumbs)
+		{
+			$breadcrumbs->parent('home');
+			$breadcrumbs->push(Lang::get('menu.information management'), url('management/information'), ['icon' => 'ace-icon fa fa-file-o']);
+		});
+		
+		Breadcrumbs::register('information-management-form', function($breadcrumbs,$data)
+		{
+			$breadcrumbs->parent('information-management');
+			$breadcrumbs->push(Lang::get('label.new'), url('management/information/form'), ['icon' => 'ace-icon fa fa-file-o']);
+			if($data){
+				$breadcrumbs->push(Lang::get('label.edit').' > '.$data->name, url('management/information/form/'.$data->id), ['icon' => 'ace-icon fa fa-newspaper-o']);
+			}
 		});
 	}
 	
@@ -460,6 +475,207 @@ class FileController extends Controller {
 		$grid = Auth::user()->authorize() == 0 ? $grid : $grid2;
 		return Theme::view('files.pages.download',['grid'=>$grid]);
 	}
-
+	
+	/**
+	 * Management Information
+	 *
+	 * @return @Theme View
+	 */
+	public function onInformation() {
+		Meta::title(Lang::get('meta.file information'));
+		Meta::meta('description', Lang::get('meta.file informationt description'));
+	
+		$grid = new Grid(
+				(new GridConfig)
+				->setDataProvider(
+						new EloquentDataProvider (
+								\App\Models\Information::leftJoin('users', 'users.id', '=' ,'informations.created_by')
+								->select('informations.*')
+								->addSelect("users.first_name as upload_name")
+								->addSelect("informations.created_at as upload_at")
+								)
+						)
+				->setName('grid')
+				->setPageSize(15)
+				->setColumns([
+						(new FieldConfig)
+						->setName('name')
+						->setLabel(Lang::get('label.name'))
+						->setSortable(false)
+						->setCallback(function ($val) {
+							return '<a href="'.url('file/information/download/'.$val).'">'.$val.'</a>';
+						})
+						,
+						(new FieldConfig)
+						->setName('description')
+						->setLabel(Lang::get('label.description'))
+						->setSortable(true)
+						,
+						(new FieldConfig)
+						->setName('upload_name')
+						->setLabel(Lang::get('label.upload by'))
+						->setSortable(true)
+						,
+						(new FieldConfig)
+						->setName('upload_at')
+						->setLabel(Lang::get('label.upload at'))
+						->setSortable(true)
+						,
+						(new FieldConfig)
+						->setName('active')
+						->setLabel(Lang::get('label.active'))
+						->setSortable(false)
+						->setCallback(function ($val) {
+							return '<a href="javascript:active(\''.$val.'\')"><center><i class="fa '.($val?'fa-check':'fa-close').'"></i></center></a>';
+						})
+						,
+						(new FieldConfig)
+						->setName('id')
+						->setLabel(Lang::get('menu.edit'))
+						->setSortable(false)
+						->setCallback(function ($val) {
+							return '
+								<div class="dropdown">
+									<button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+									<i class="glyphicon glyphicon-edit"></i>
+									'.Lang::get('menu.edit').'
+									<span class="caret"></span></button>
+									<ul class="dropdown-menu">
+										<li><a href="'.url('management/information/form/'.$val).'"><i class="remove glyphicon glyphicon-edit"></i> '.Lang::get('menu.edit').'</a></li>
+										<li><a href="#" class="delete" id="'.$val.'" ><i class="glyphicon glyphicon-trash"></i> '.Lang::get('menu.remove').'</a></li>
+									</ul>
+								</div>';
+						})
+	
+						,
+						])
+				);
+		return Theme::view('files.information',compact('grid', 'text'));
+	}
+	
+	
+	/**
+	 * Function OnInformationForm
+	 * to View Form User
+	 * @Request @Name,@Code etc
+	 *
+	 * @return json
+	 */
+	public function onInformationForm($id = 0) {
+		Meta::title(Lang::get('meta.file information add'));
+		Meta::meta('description', Lang::get('meta.file information add description'));
+		$Model = \App\Models\Information::select(['id','mime','name','description','active','created_by'])
+		->where('id',$id)
+		->first();
+		return Theme::view('files.information-form',[
+				'data' => $Model,
+		]);
+	}
+	
+	/**
+	 * Function Store
+	 * to Save/Update Brand From Brand Form
+	 * @Request @Name,@Code etc
+	 *
+	 * @return json
+	 */
+	public function onInformationStore(\App\Http\Requests\InformationRequest $request)
+	{
+		$filename = "";
+		if($request->file('image')!= null) {
+			$file = $request->file('image');
+			$filename = $file->getClientOriginalName();
+			$upload = $file->move(base_path() . '/public/uploads/informations/',$filename);
+		}
+	
+		$informations = new \App\Models\Information();
+		if($request->has('id')) {
+			$informations = $informations->where('id',$request->get('id'))->first();
+			$informations->updated_at = date('Y-m-d H:i:s');
+			$informations->updated_by = Auth::user()->id;
+		}
+		else
+		{
+			$informations->created_at = date('Y-m-d H:i:s');
+			$informations->created_by = Auth::user()->id;
+		}
+	
+		if($filename != "")
+		{
+			$informations->name = $filename;
+			$informations->mime = $file->getClientMimeType();
+		}
+		
+		$informations->description = $request->get('description');
+		$informations->active = $request->get('active') ? $request->get('active') : 0 ;
+		$informations->save();
+	
+	
+		if($informations) {
+			$param['message'] =  Lang::get('info.inserted');
+			$param['error'] = false;
+		}
+		else {
+			$param['message'] = Lang::get('message.file error');
+			$param['error'] =  true;
+		}
+	
+		return json_encode($param);
+	}
+	
+	/**
+	 * Function Remove
+	 * Process Delete the Brand Data
+	 *
+	 * @return \Illuminate\Http\JsonResponse
+	 */
+	public function onInformationDelete()
+	{
+		$id = Input::get('id');
+		$Model = \App\Models\Information::select(['id','name'])
+		->where('id',$id)
+		->first();
+	
+		$path = base_path() . '/public/uploads/informations/';
+	
+		if($Model) {
+			File::delete($path.$Model->name);
+			\App\Models\Information::where('id', $id)->delete();
+			$param['message'] = Lang::get('message.has deleted');
+			$param['error'] = false;
+		}
+		else
+		{
+			$param['message'] = Lang::get('message.has error');
+			$param['error'] = true;
+		}
+		return json_encode($param);
+	}
+	
+	/**
+	 * Function Download Information File
+	 * to Response Form User
+	 * @Request @Name,@Code etc
+	 *
+	 * @return response ajax
+	 */
+	public function onInformationDownload($id)
+	{
+		$path = base_path() . '/public/uploads/informations/';
+		$id = $id;
+		$row = \App\Models\Information::select(['name'])
+		->where('name',$id)
+		->first();
+	
+		if($row) {
+			$file = $path.$row->name;
+			return response()->download($file);
+		}
+		else {
+				
+		}
+	
+	}
+	
 }
  

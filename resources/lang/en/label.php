@@ -11,6 +11,7 @@ return [
 	'edit' => 'Edit',
 	'email' => 'Email',
 	'error notification' => 'Error Notification',
+	'file information' => 'File Information',	
 	'file name' => 'File Name',
 	'first name' => 'First Name',
 	'id' => 'ID',

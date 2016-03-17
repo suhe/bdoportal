@@ -19,4 +19,11 @@
 		{!! Form::close() !!}
 	</div>
 </div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h4>{!! Lang::get("label.file information") !!}</h4>
+		{!! $grid !!}																	
+	</div>
+</div>
 @endsection
