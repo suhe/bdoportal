@@ -350,11 +350,14 @@ class UserController extends Controller {
 				,				
 			])
 		);
+		
+		
 		/** End File Information Download **/
 		
 		return Theme::view('users.pages.information',[
 			'data' => Auth::user(),
-			'grid' => $grid	
+			'grid' => $grid,
+			
 		]);	
 	}
 	
@@ -399,8 +402,7 @@ class UserController extends Controller {
 	*
 	* @return @Theme View
 	*/
-	public function onPageUserInformation()
-	{
+	public function onPageUserInformation() {
 		Meta::title(Lang::get('meta.user information'));
 		Meta::meta('description', Lang::get('meta.user information description'));
 		
@@ -456,7 +458,19 @@ class UserController extends Controller {
                     ,
 				])
 		);
-		return Theme::view('users.pages.user-information',compact('grid', 'text'));
+		
+		$grid2 = new Grid ( (new GridConfig ())->setDataProvider ( new EloquentDataProvider ( \App\Models\Information::leftJoin ( 'users', 'users.id', '=', 'informations.created_by' )->select ( 'informations.*' )->addSelect ( "users.first_name as upload_name" )->addSelect ( "informations.created_at as upload_at" ) ) )->setName ( 'grid' )->setPageSize ( 15 )->setColumns ( [
+				(new FieldConfig ())->setName ( 'name' )->setLabel ( Lang::get ( 'label.name' ) )->setSortable ( false )->setCallback ( function ($val) {
+					return '<a href="' . url ( 'file/information/download/' . $val ) . '">' . $val . '</a>';
+				} ),
+				(new FieldConfig ())->setName ( 'description' )->setLabel ( Lang::get ( 'label.description' ) )->setSortable ( true ),
+				(new FieldConfig ())->setName ( 'upload_name' )->setLabel ( Lang::get ( 'label.upload by' ) )->setSortable ( true ),
+				(new FieldConfig ())->setName ( 'upload_at' )->setLabel ( Lang::get ( 'label.upload at' ) )->setSortable ( true ),
+				
+				]
+		) );
+		
+		return Theme::view('users.pages.user-information',compact('grid','grid2','text'));
 	}
 	
 	

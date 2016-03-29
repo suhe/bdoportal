@@ -6,6 +6,7 @@ return [
 	'change password' => 'Change Password',
 	'company id' => 'Company ID',
 	'company' => 'Company',
+	'date' => 'Date',	
 	'delete notification' => 'Delete Notification',
 	'description' => 'Description',
 	'edit' => 'Edit',
@@ -31,5 +32,6 @@ return [
 	'upload at' => 'Upload at',
 	'upload by' => 'Upload by',
 	'users' => 'User',
+	'year' => 'Year',	
 	'welcome' => 'Welcome',
 ];

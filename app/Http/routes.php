@@ -66,6 +66,7 @@ Route::group(['prefix' => 'user','middleware' => 'auth'], function() {
 
 Route::group(['prefix' => 'file','middleware' => 'auth'], function() {
 	Route::get('/download', ['uses'=>'FileController@onPageDownload']);
+	Route::get('/download/details/{periode}', ['uses'=>'FileController@onPageFileDetails']);
 	Route::get('/download/{id}', ['uses'=>'FileController@onDownload']);
 	Route::get('/information/download/{id}', ['uses'=>'FileController@onInformationDownload']);
 });

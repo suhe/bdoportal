@@ -7,6 +7,16 @@
 		{!!	Form::hidden('id', isset($data)?$data->id:null, ['id' => 'id']) !!}
 		{!! Form::file('image',['class'=>'form-control','style' => 'visibility:hidden','id'=>'filename']) !!}
 		<div class="form-group">
+			<label class="control-label col-xs-12 col-sm-2 no-padding-right" for="date">{!! Lang::get('label.date') !!} *</label>
+			<div class="col-sm-2">
+				<div class="input-group date" id="datex">
+				     <input id="date" name="date" type="text" class="form-control" value="<?=isset($data) ? $data->date : date("d/m/Y") ?>" />	
+				     <span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>
+				 </div>				
+			</div>
+		</div>
+					
+		<div class="form-group">
 			<label class="control-label col-xs-12 col-sm-2 no-padding-right" for="name">{!! Lang::get('label.file name') !!} *</label>
 			<div class="col-xs-12 col-sm-9">
 				<div class="input-group input-group-sm">
@@ -91,9 +101,11 @@
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('themes/portalz/assets/css/chosen.css') }}" />
+<link rel="stylesheet" href="{!! asset('vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css') !!}" />
 @endpush
 
 @push('scripts')
+<script src="{!! asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js') !!}"></script>
 <script src="{!! asset('themes/portalz/assets/js/chosen.jquery.js') !!}"></script>
 <script>
  	$(document).ready(function(){
@@ -108,6 +120,13 @@
 {!! JsValidate::formRequest('\App\Http\Requests\FileRequest', '#storeForm') !!}
 <script type="text/javascript">
 jQuery(document).ready(function($) {
+	$('#datex').datepicker({
+		format: 'dd/mm/yyyy',
+	    calendarWeeks: true,
+	    weekStart : 1,
+	    autoclose : true
+	});
+	
 	var company = $("company_id");
 	var multiselect = $('#multiselect');
 	var company_value = $("#company_id option:selected" ).attr('value');

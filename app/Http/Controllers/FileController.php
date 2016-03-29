@@ -33,6 +33,7 @@ use Nayjest\Grids\GridConfig;
 use Eusonlito\LaravelMeta\Facade as Meta;
 use Auth;
 use Breadcrumbs;
+use DB;
 use File;
 use Request;
 use Response;
@@ -187,6 +188,7 @@ class FileController extends Controller {
 		Meta::title(Lang::get('meta.file add'));
 		Meta::meta('description', Lang::get('meta.file add description'));
 		$Model = \App\Models\File::select(['id','name','description','company_id','active','created_by'])
+		->selectRaw("Date_Format(date,'%d/%m/%Y') as date")
 		->where('id',$id)
 		->first();
 		return Theme::view('files.form',[
@@ -245,6 +247,7 @@ class FileController extends Controller {
 		$files->user_access = "";
 		$files->description = $request->get('description');
 		$files->company_id = $request->get('company_id');
+		$files->date = preg_replace('!(\d+)/(\d+)/(\d+)!', '\3-\2-\1',$request->get('date'));
 		$files->active = $request->get('active') ? $request->get('active') : 0 ;
 		
 		$files->save();
@@ -357,32 +360,93 @@ class FileController extends Controller {
 	*
 	* @return @Theme View
 	*/
-	public function onPageDownload()
-	{
+	public function onPageDownload() {
 		Meta::title(Lang::get('meta.file download'));
 		Meta::meta('description', Lang::get('meta.file download description'));
 		
-		$query = \App\Models\File::leftJoin('users', 'users.id', '=' ,'files.created_by')
+		/*$query = \App\Models\File::leftJoin('users', 'users.id', '=' ,'files.created_by')
 		->leftJoin('companies', 'companies.id', '=' ,'files.company_id')
 		->select('files.*')
+		->selectRaw("YEAR(files.created_at) as year")
 		->addSelect("users.first_name as upload_name")
 		->addSelect("files.created_at as upload_at")
 		->addSelect("companies._id as company_id")
 		->addSelect("companies.name as company_name")
 		->where('files.active', '=', '1');
 		
-		if(Auth::user()->authorize() == 0)
-		{
+		if(Auth::user()->authorize() == 0) {
 			$query = $query->leftJoin('file_users', 'file_users.file_id', '=' ,'files.id')
 			->where('file_users.user_id','=',Auth::user()->id)
-			->where('files.company_id','=',Auth::user()->company_id);
-		}
-		else if(Auth::user()->authorize() == 2)
-		{
-			$query = $query->where('files.company_id','=',Auth::user()->company_id);
+			->where('files.company_id','=',Auth::user()->company_id)
+			->groupBy(DB::raw('YEAR(files.created_at)'));
+		} else if(Auth::user()->authorize() == 2) {
+			$query = $query->where('files.company_id','=',Auth::user()->company_id)
+			->groupBy(DB::raw('YEAR(files.created_at),MONTH(files.created_at)'));
+		}*/
+		
+		
+		if(Auth::user()->authorize() == 0) {
+			$groups = \App\Models\File::selectRaw("YEAR(files.date) as periode")
+			->leftJoin('file_users', 'file_users.file_id', '=' ,'files.id')
+			->where('file_users.user_id','=',Auth::user()->id)
+			->groupBy(DB::raw('YEAR(files.date)'));
+		} else if(Auth::user()->authorize() == 2) {
+			$groups = \App\Models\File::selectRaw("CONCAT(MONTHNAME(files.date),' ',YEAR(files.date)) as periode,MONTH(date) as month,YEAR(date) as year")
+			->where('files.company_id','=',Auth::user()->company_id)
+			->groupBy(DB::raw('YEAR(files.date),MONTH(files.date)'));
+		} else {
+			//administrator
+			$groups = \App\Models\File::selectRaw("CONCAT(MONTHNAME(files.date),' ',YEAR(files.date)) as periode,MONTH(date) as month,YEAR(date) as year")
+			->groupBy(DB::raw('YEAR(files.date),MONTH(files.date)'));
 		}
 		
-		$grid = new Grid(
+		$groups = $groups->get();
+		
+		$var["grid"] = '';
+		$i = 1;
+		foreach($groups as $group) {
+			$var["grid"] .= '<tr id="'.$i.'" class="accordion-toggle" data-toggle="collapse" data-target=".'.$i.'">';
+			$var["grid"] .= '<td colspan = "2" >'.$group->periode.'</td>';
+			$var["grid"] .= '<td><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i></td>';
+			$var["grid"] .= '</tr>';
+			$var["grid"] .= '<tr>';
+			$var["grid"] .= '<td colspan="3" class="hiddenRow">';
+			$var["grid"] .= '<div class="row accordion accordion-body collapse '.$i.'"  toogle="'.$i.'">';
+			
+			if(Auth::user()->authorize() == 0) {
+				$query = \App\Models\File::leftJoin('users', 'users.id', '=' ,'files.created_by')
+				->leftJoin('file_users', 'file_users.file_id', '=' ,'files.id')
+				->selectRaw("files.name,DATE_FORMAT(date,'%d/%m/%Y') as date,files.description,users.first_name as upload_name,files.created_at as upload_at");
+				$query = $query->whereRaw("files.active=1 and YEAR(date) = '".$group->periode."' and file_users.user_id = ".Auth::user()->id)
+				->get();
+			} else if(Auth::user()->authorize() == 2) {
+				$query = \App\Models\File::leftJoin('users', 'users.id', '=' ,'files.created_by')
+				->selectRaw("files.name,DATE_FORMAT(date,'%d/%m/%Y') as date,files.description,users.first_name as upload_name,files.created_at as upload_at");
+				$query = $query->whereRaw("files.active=1 and YEAR(date) = '".$group->year."' and MONTH(date) = '".$group->month."' and files.company_id = ".Auth::user()->company_id)
+				->get();
+			} else {
+				$query = \App\Models\File::leftJoin('users', 'users.id', '=' ,'files.created_by')
+				->selectRaw("files.name,DATE_FORMAT(date,'%d/%m/%Y') as date,files.description,users.first_name as upload_name,files.created_at as upload_at");
+				$query = $query->whereRaw("files.active=1 and YEAR(date) = '".$group->year."' and MONTH(date) = '".$group->month."'")
+				->get();
+			}
+			
+			if($query) {
+				$var["grid"] .= '<table class="table table-striped">';
+				foreach($query as $row) {
+					$var["grid"] .= '<tr>';
+					$var["grid"] .= '<td class="col-sm-1">'.$row->date.'</td>';
+					$var["grid"] .= '<td class="col-sm-5"><a href="'.url('file/download/'.$row->name).'">'.$row->name.'</a></td>';
+					$var["grid"] .= '<td class="col-sm-6">'.$row->description.'</td>';
+					$var["grid"] .= '</tr>';
+				}
+				$var["grid"] .= '</table>';
+			}
+			
+			$i++;
+		}
+		
+		/*$grid = new Grid(
 			 (new GridConfig)
 				->setDataProvider(
 					new EloquentDataProvider (
@@ -393,6 +457,14 @@ class FileController extends Controller {
 				->setName('grid')
 				->setPageSize(15)
 				->setColumns([
+					(new FieldConfig)
+					->setName('year')
+					->setLabel(Lang::get('label.year'))
+					->setSortable(false)
+					->setCallback(function ($val) {
+							return '<a href="#" onclick ="detail(this,'.$val.');return false;"><i class="fa fa-plus"></i></a>';
+					})
+						,
 					(new FieldConfig)
                         ->setName('name')
                         ->setLabel(Lang::get('label.name'))
@@ -471,9 +543,30 @@ class FileController extends Controller {
                         ->setSortable(true)   
                     ,
 				])
-		);
-		$grid = Auth::user()->authorize() == 0 ? $grid : $grid2;
-		return Theme::view('files.pages.download',['grid'=>$grid]);
+		);*/
+		
+		//$grid = Auth::user()->authorize() == 0 ? $grid : $grid2;
+		return Theme::view('files.pages.download',['grid'=>$var["grid"]]);
+	}
+	
+	public function onPageFileDetails($periode) {
+		$query = \App\Models\File::leftJoin('users', 'users.id', '=' ,'files.created_by')
+		->leftJoin('companies', 'companies.id', '=' ,'files.company_id')
+		->select('files.*')
+		->selectRaw("YEAR(files.created_at) as year")
+		->addSelect("users.first_name as upload_name")
+		->addSelect("files.created_at as upload_at")
+		->addSelect("companies._id as company_id")
+		->addSelect("companies.name as company_name")
+		->where('files.active', '=', '1')
+		->first();
+		
+		if($query!==null){
+			echo $query->name;
+		}
+		else{
+			echo "Detail is empty";
+		}
 	}
 	
 	/**
