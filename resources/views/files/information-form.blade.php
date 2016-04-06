@@ -27,8 +27,28 @@
 			</div>		
 		</div>
 		
-		
-		
+		<div class="form-group">
+			<label class="control-label col-xs-12 col-sm-2 no-padding-right" for="name">{!! Lang::get('label.users') !!} </label>
+			<div class="col-xs-12 col-sm-9">
+				<div class="row">
+					<div class="col-xs-5">
+						{!!Form::select('company_from[]',\App\Models\Company::select(['companies.id','companies.name'])->where('companies.active',1)->lists('name','id'),null, ['multiple'=>'multiple','size' => 8,'class' => 'form-control','id'=>'multiselect','placeholder'=>lang::get('label.select company')]) !!}	
+					</div>
+	
+					<div class="col-xs-2">
+						<button type="button" id="multiselect_rightAll" class="btn btn-sm btn-block btn-primary"><i class="glyphicon glyphicon-forward"></i></button>
+						<button type="button" id="multiselect_rightSelected" class="btn btn-sm btn-sm btn-block btn-primary"><i class="glyphicon glyphicon-chevron-right"></i></button>
+						<button type="button" id="multiselect_leftSelected" class="btn btn-sm btn-block btn-primary"><i class="glyphicon glyphicon-chevron-left"></i></button>
+						<button type="button" id="multiselect_leftAll" class="btn btn-sm btn-block btn-primary"><i class="glyphicon glyphicon-backward"></i></button>
+					</div>
+	
+					<div class="col-xs-5">
+						{!!Form::select('companies[]',\App\Models\InformationCompany::join('companies','companies.id','=','information_companies.company_id')->select(['companies.id','companies.name'])->where('companies.active',1)->where('information_companies.information_id',$data?$data->id:0)->lists('name','id'),\App\Models\InformationCompany::join('companies','companies.id','=','information_companies.company_id')->select(['companies.id','companies.name'])->where('companies.active',1)->where('information_companies.information_id',$data?$data->id:0)->lists('id'), ['multiple'=>'multiple','size' => 8,'class' => 'form-control','id'=>'multiselect_to','placeholder'=>lang::get('label.selected company')]) !!}	
+					</div>
+					
+				</div>
+			</div>	
+		</div>	
 		
 		<div class="form-group">
 			<label class="control-label col-xs-12 col-sm-2 no-padding-right" for="active">{!! Lang::get('label.active') !!}:</label>
@@ -73,9 +93,14 @@
 </script>
 <script src="{!! asset('vendor/jsvalidation/js/jsvalidation.js') !!}"></script>
 {!! JsValidate::formRequest('\App\Http\Requests\InformationRequest', '#storeForm') !!}
+<script type="text/javascript" src="{!! asset('vendor/multiselect-1.0.4/js/multiselect.min.js') !!}"></script>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
-	
+	var multiselect = $('#multiselect');
+	loadMultiSelect(multiselect);
+	function loadMultiSelect(args) {
+		args.multiselect();
+	}
 });
 </script>
 <script type="text/javascript">

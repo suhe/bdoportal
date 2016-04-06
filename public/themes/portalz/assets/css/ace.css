@@ -6,7 +6,7 @@ body {
   background-color: #e4e6e9;
   min-height: 100%;
   padding-bottom: 0;
-  font-family: 'Open Sans';
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
   font-size: 13px;
   color: #393939;
   line-height: 1.5;
@@ -121,7 +121,7 @@ a:active {
 h1 {
   font-size: 32px;
   font-weight: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
 }
 h1.smaller {
   font-size: 31px;
@@ -135,7 +135,7 @@ h1.block {
 h2 {
   font-size: 26px;
   font-weight: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
 }
 h2.smaller {
   font-size: 25px;
@@ -149,7 +149,7 @@ h2.block {
 h3 {
   font-size: 22px;
   font-weight: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
 }
 h3.smaller {
   font-size: 21px;
@@ -163,7 +163,7 @@ h3.block {
 h4 {
   font-size: 18px;
   font-weight: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
 }
 h4.smaller {
   font-size: 17px;
@@ -177,7 +177,7 @@ h4.block {
 h5 {
   font-size: 15px;
   font-weight: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
 }
 h5.smaller {
   font-size: 14px;
@@ -191,7 +191,7 @@ h5.block {
 h6 {
   font-size: 13px;
   font-weight: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
 }
 h6.smaller {
   font-size: 12px;
@@ -4757,8 +4757,8 @@ body.mob-safari .sidebar.sidebar-fixed {
 .breadcrumbs {
   position: relative;
   z-index: auto;
-  border-bottom: 1px solid #e5e5e5;
-  background-color: #ed1a3b;
+  border-bottom: 1px solid #ccc;
+  background-color: #2eafa4;
   min-height: 41px;
   line-height: 40px;
   padding: 0 12px 0 0;
@@ -5532,8 +5532,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-info,
 .btn-info:focus {
-  background-color: #6fb3e0 !important;
-  border-color: #6fb3e0;
+  background-color: #5fcbe5 !important;
+  border-color: #5fcbe5;
 }
 .btn-info:hover,
 .btn-info:active,
@@ -5622,8 +5622,8 @@ fieldset[disabled] .btn-info2.active {
 }
 .btn-success,
 .btn-success:focus {
-  background-color: #87b87f !important;
-  border-color: #87b87f;
+  background-color: #2caea2 !important;
+  border-color: #2caea2;
 }
 .btn-success:hover,
 .btn-success:active,
@@ -5667,8 +5667,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-warning,
 .btn-warning:focus {
-  background-color: #ffb752 !important;
-  border-color: #ffb752;
+  background-color: #f08e23 !important;
+  border-color: #f08e23;
 }
 .btn-warning:hover,
 .btn-warning:active,
@@ -5712,8 +5712,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger,
 .btn-danger:focus {
-  background-color: #d15b47 !important;
-  border-color: #d15b47;
+  background-color: #ec1b3b !important;
+  border-color: #ec1b3b;
 }
 .btn-danger:hover,
 .btn-danger:active,
@@ -8717,7 +8717,7 @@ input[type="color"] {
   border: 1px solid #d5d5d5;
   padding: 5px 4px 6px;
   font-size: 14px;
-  font-family: inherit;
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   -webkit-transition-duration: 0.1s;
@@ -9094,7 +9094,7 @@ input[type=radio].ace.disabled + .lbl::before {
 input[type=radio].ace @{lbl}::before {
 	border-radius:100%;
 	font-size: 34px;
-	font-family: Helvetica, Arial, "Sans-Serif";//looks better but incosistent
+	font-family: "Trebuchet MS", "Open Sans", sans-serif;
 	line-height: 13px;
 }
 */
@@ -9135,7 +9135,7 @@ input[type=checkbox].ace.ace-switch + .lbl {
   min-height: 24px;
 }
 input[type=checkbox].ace.ace-switch + .lbl::before {
-  font-family: 'Open Sans';
+ font-family: "Trebuchet MS", "Open Sans", sans-serif;
   content: "ON\a0\a0\a0\a0\a0\a0\a0\a0\a0OFF";
   color: #999;
   text-shadow: 0 0 0 #999;
@@ -9161,7 +9161,7 @@ input[type=checkbox].ace.ace-switch + .lbl::before {
   top: auto;
 }
 input[type=checkbox].ace.ace-switch + .lbl::after {
-  font-family: 'Open Sans';
+  font-family: "Trebuchet MS", "Open Sans", sans-serif;
   content: 'III';
   font-size: 12px;
   font-weight: normal;

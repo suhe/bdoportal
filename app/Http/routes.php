@@ -12,9 +12,10 @@
 */
 
 Route::get('/', ['uses'=>'UserController@onPageChangePassword','middleware' => 'auth']);
-Route::get('/login', 'Auth\AuthController@onPageLogin');
+Route::get('/login', 'Auth\AuthController@login');
+Route::post('/login/post', 'Auth\AuthController@doLogin');
 Route::get('/logout', 'Auth\AuthController@onLogout');
-Route::post('/login/auth', 'Auth\AuthController@onLogin');
+
 Route::group(['prefix' => 'administration','middleware' => 'auth'], function() {
 	Route::get('/role', ['uses'=>'RoleController@index','middleware' => 'administrator']);
 	Route::get('/role/form', ['uses'=>'RoleController@onForm','middleware' => 'administrator']);

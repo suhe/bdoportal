@@ -311,9 +311,12 @@ class UserController extends Controller {
 		
 		/** File Information Download **/
 		$query = \App\Models\Information::leftJoin('users', 'users.id', '=' ,'informations.created_by')
+		->leftJoin('information_companies', 'information_companies.information_id', '=' ,'informations.id')
 		->select('informations.*')
 		->addSelect("users.first_name as upload_name")
+		->where('information_companies.company_id', '=', Auth::user()->company_id)
 		->where('informations.active', '=', '1');
+		
 		$grid = new Grid(
 			(new GridConfig)
 			->setDataProvider(
@@ -344,7 +347,7 @@ class UserController extends Controller {
 				->setSortable(true)
 				,
 				(new FieldConfig)
-				->setName('upload_at')
+				->setName('created_at')
 				->setLabel(Lang::get('label.upload at'))
 				->setSortable(true)
 				,				
@@ -459,7 +462,7 @@ class UserController extends Controller {
 				])
 		);
 		
-		$grid2 = new Grid ( (new GridConfig ())->setDataProvider ( new EloquentDataProvider ( \App\Models\Information::leftJoin ( 'users', 'users.id', '=', 'informations.created_by' )->select ( 'informations.*' )->addSelect ( "users.first_name as upload_name" )->addSelect ( "informations.created_at as upload_at" ) ) )->setName ( 'grid' )->setPageSize ( 15 )->setColumns ( [
+		$grid2 = new Grid ( (new GridConfig ())->setDataProvider ( new EloquentDataProvider ( \App\Models\Information::leftJoin ( 'users', 'users.id', '=', 'informations.created_by' )->leftJoin('information_companies', 'information_companies.information_id', '=' ,'informations.id')->select ( 'informations.*' )->addSelect ( "users.first_name as upload_name" )->where("information_companies.company_id",Auth::user()->company_id)->addSelect ( "informations.created_at as upload_at" ) ) )->setName ( 'grid' )->setPageSize ( 15 )->setColumns ( [
 				(new FieldConfig ())->setName ( 'name' )->setLabel ( Lang::get ( 'label.name' ) )->setSortable ( false )->setCallback ( function ($val) {
 					return '<a href="' . url ( 'file/information/download/' . $val ) . '">' . $val . '</a>';
 				} ),

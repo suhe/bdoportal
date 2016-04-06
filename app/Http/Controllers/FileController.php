@@ -672,8 +672,7 @@ class FileController extends Controller {
 	 *
 	 * @return json
 	 */
-	public function onInformationStore(\App\Http\Requests\InformationRequest $request)
-	{
+	public function onInformationStore(\App\Http\Requests\InformationRequest $request) {
 		$filename = "";
 		if($request->file('image')!= null) {
 			$file = $request->file('image');
@@ -686,15 +685,15 @@ class FileController extends Controller {
 			$informations = $informations->where('id',$request->get('id'))->first();
 			$informations->updated_at = date('Y-m-d H:i:s');
 			$informations->updated_by = Auth::user()->id;
+			//delete information exists 
+			\App\Models\InformationCompany::where('information_id', $request->get('id'))->delete();
 		}
-		else
-		{
+		else {
 			$informations->created_at = date('Y-m-d H:i:s');
 			$informations->created_by = Auth::user()->id;
 		}
 	
-		if($filename != "")
-		{
+		if($filename != "") {
 			$informations->name = $filename;
 			$informations->mime = $file->getClientMimeType();
 		}
@@ -702,14 +701,40 @@ class FileController extends Controller {
 		$informations->description = $request->get('description');
 		$informations->active = $request->get('active') ? $request->get('active') : 0 ;
 		$informations->save();
-	
+		
+		//Com Files
+		$company = $request->get('companies');
+		$company_selected = count($company);
+		if($company_selected > 0) {
+			$company_access = "";
+			for($i=0;$i<$company_selected;$i++) {
+				if(isset($company[$i])) {
+					$info_company = new \App\Models\InformationCompany();
+					$info_company->company_id = $company[$i];
+					$info_company->information_id = $informations->id;
+					$info_company->save();
+						
+					//Search User
+					$company_info = \App\Models\Company::where('id',$company[$i])->first();
+					if($i>0) $company_access.=',';
+		
+					if($company_info)
+						$company_access.= $company_info->_id;
+				}
+			}
+				
+			$info = \App\Models\Information::where('id',$informations->id)->first();
+			$info->company_access = $company_access;
+			$info->save();
+		}
+		
 	
 		if($informations) {
 			$param['message'] =  Lang::get('info.inserted');
 			$param['error'] = false;
 		}
 		else {
-			$param['message'] = Lang::get('message.file error');
+			$param['message'] = Lang::get('message.file error') . " Error".$company_selected;
 			$param['error'] =  true;
 		}
 	
@@ -734,6 +759,7 @@ class FileController extends Controller {
 		if($Model) {
 			File::delete($path.$Model->name);
 			\App\Models\Information::where('id', $id)->delete();
+			\App\Models\InformationCompany::where('company_id',$id)->delete();
 			$param['message'] = Lang::get('message.has deleted');
 			$param['error'] = false;
 		}

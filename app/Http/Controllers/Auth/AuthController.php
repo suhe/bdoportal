@@ -1,9 +1,10 @@
 <?php namespace App\Http\Controllers\Auth;
 
-use \App\Http\Controllers\Controller;
-use \Illuminate\Support\Facades\Input;
-use \Illuminate\Support\Facades\Response;
-use \App\Models\User;
+use App\Http\Controllers\Controller;
+//use Illuminate\Support\Facades\Input;
+//use Illuminate\Support\Facades\Response;
+use App\Http\Requests\AuthRequest;
+use App\Models\User;
 use Auth;
 use Lang;
 use Redirect;
@@ -39,35 +40,28 @@ class AuthController extends Controller {
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}*/
 	
-	public function onPageLogin()
-	{
-		return view('auth.sign_in');
+	public function login() {
+		return view('auth.page_login');
 	}
 	
-	public function onLogin(\App\Http\Requests\AuthRequest $request) 
-	{
+	public function doLogin(AuthRequest $request) {
 		$loginField = ['email' => $request->get('email'), 'password' => $request->get('password')];
+		$authUser = \App\Models\User::join('companies','companies.id','=','users.company_id')
+		->where('email',$request->get('email'))->where('_id',$request->get('company_id'))
+		->where('users.active',1)->first();
 		
-		$authUser = \App\Models\User::join('companies','companies.id','=','users.company_id')->where('email',$request->get('email'))->where('_id',$request->get('company_id'))->where('users.active',1)->first();
-		if($authUser)
-		{
-			if (!Auth::attempt($loginField,false))
-			{
-				Session::flash('msg_error', Lang::get('message.email or password wrong'));
+		if($authUser) {
+			if (!Auth::attempt($loginField,false)) {
+				Session::flash('message', Lang::get('message.email or password wrong'));
 				return Redirect::intended('/login');
 			}
-			else
-			{
+			else {
 				return Redirect::intended('/');
 			}
-		}
-		else
-		{
-			Session::flash('msg_error', Lang::get('message.email or company id wrong'));
+		} else {
+			Session::flash('message', Lang::get('message.email or company id wrong'));
 			return Redirect::intended('/login');
 		}
-		
-		
 	}
 	
 	/**
@@ -76,8 +70,7 @@ class AuthController extends Controller {
 	 * Email : hendarsyahss@gmail.com
 	 * return @redirect to specific module
 	 */
-	public function onLogout()
-	{
+	public function onLogout() {
 		//Activity::Record(['module' => $this->module,'event'=>'logout']);
 		Auth::logout();
 		return Redirect::intended('/login');
