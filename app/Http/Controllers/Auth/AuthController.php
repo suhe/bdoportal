@@ -56,7 +56,10 @@ class AuthController extends Controller {
 				return Redirect::intended('/login');
 			}
 			else {
-				return Redirect::intended('/');
+				if(Auth::user()->change_password_count > 0)
+					return Redirect::intended('/file/download');
+				else
+					return Redirect::intended('/');
 			}
 		} else {
 			Session::flash('message', Lang::get('message.email or company id wrong'));

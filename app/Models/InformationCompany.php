@@ -28,8 +28,20 @@ class InformationCompany extends Model {
      *
      * @var array
      */
-    protected $fillable = ['id','information_id','company_id'];
+    protected $fillable = ['information_id','company_id'];
 	
+	/**
+     * The attributes of primary key
+     *
+     * @var array
+     */
+	protected $primaryKey = null;
+	/**
+     * Auto increment
+     *
+     * @var boolean
+     */
+    public $incrementing = false;
     
 	/**
      * Date with update / insert remember token

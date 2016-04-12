@@ -394,6 +394,7 @@ class UserController extends Controller {
 		$user->password = bcrypt($request->get('password'));
 		$user->updated_by = Auth::user()->id;
 		$user->updated_at = date('Y-m-d H:i:s');
+		$user->change_password_count = $user->change_password_count + 1;
 		$user->save();
 		$param['message'] =  Lang::get('message.updated');
 		$param['error'] = false; 

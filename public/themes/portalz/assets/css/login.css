@@ -59,13 +59,13 @@ nav.hg-80 {
 
 nav>.top-divider {
     background: url("../img/top-divider.png") no-repeat;
-    width: 23px;
+    width: 24px;
     display:block;
     position: absolute;
     top:5px;
     bottom: 0;
-    right: 300px;
-    min-height: 70px;
+    right: 450px;
+    min-height: 56px;
 }
 
 /*****************************************************************************
@@ -87,6 +87,7 @@ nav>.top-divider {
 #tag-login #tag-title {
 	background-color:#2dafa3;
     padding:35px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #page-login {
@@ -104,11 +105,11 @@ nav>.top-divider {
 ******************************************************************************/
 footer > .bottom-divider {
     background: url("../img/bottom-divider.png") no-repeat;
-    width: 23px;
+    width: 24px;
     display:block;
     position: absolute;
     bottom: 5px;
-    right: 300px;
-    min-height: 200px;
+    right: 450px;
+    min-height: 250px;
 }
 
